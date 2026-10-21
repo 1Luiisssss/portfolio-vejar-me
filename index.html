@@ -317,6 +317,7 @@ d.querySelectorAll('.card').forEach(function(c){
 
 /* Formulario: valida y abre el correo */
 var send=d.getElementById('send'),msg=d.getElementById('msg'),f=[].slice.call(d.querySelectorAll('#contacto .ci'));
+if(send)f.forEach(function(x){if(x.tagName!=='TEXTAREA')x.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();send.click()}})});
 if(send&&f.length>=4)send.addEventListener('click',function(){
   f.forEach(function(x){x.classList.remove('bad')});
   var n=f[0].value.trim(),a=f[1].value.trim(),mail=f[2].value.trim(),t=f[3].value.trim(),ok=true;
@@ -325,7 +326,7 @@ if(send&&f.length>=4)send.addEventListener('click',function(){
   if(!t){f[3].classList.add('bad');ok=false}
   if(!ok){msg.textContent='Completa tu nombre, un correo válido y el mensaje.';msg.style.color='#ff8a8a';return}
   var body='Hola, soy '+n+(a?' '+a:'')+' ('+mail+').\n\n'+t;
-  location.href='mailto:luisvejar567@gmail.com?subject='+encodeURIComponent('Contacto desde el portafolio')+'&body='+encodeURIComponent(body);
+  location.href='mailto:luisvejar567@gmail.com?subject='+encodeURIComponent('Contacto desde el portafolio — '+n)+'&body='+encodeURIComponent(body);
   msg.textContent='Abriendo tu app de correo…';msg.style.color='#9a9aa3';
 });
 })();
