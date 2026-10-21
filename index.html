@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ezryn® — Construyo mundos que se sienten vivos</title>
+<meta name="description" content="Portafolio de ezryn (Luis, Chillán Chile): sitios web que venden, mods de Minecraft que se sienten invisibles y bots de Discord que cuidan comunidades. Diseño Digital INACAP.">
+<meta name="theme-color" content="#07070c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307070c'/%3E%3Ctext x='32' y='44' font-family='Arial Black' font-size='34' font-weight='900' text-anchor='middle' fill='%23d8ff3d'%3Ee%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <p class="loader-kicker">cargando mundo…</p>
+    <p class="loader-word" aria-label="ezryn"><span>e</span><span>z</span><span>r</span><span>y</span><span>n</span></p>
+    <div class="loader-bar"><i id="loadBar"></i></div>
+    <p class="loader-pct"><span id="loadPct">0</span>%</p>
+  </div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<canvas class="dust" id="dust" aria-hidden="true"></canvas>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+<div class="toast" id="toast" role="status">copiado ✓</div>
+
+<!-- Nav -->
+<header class="nav" id="nav">
+  <a class="logo" href="#top">ezryn<sup>®</sup></a>
+  <div class="nav-meta">
+    <span class="live"><i></i><span id="clock">--:--</span> Chillán</span>
+    <span class="avail">disponible</span>
+  </div>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+    <span></span><span></span>
+  </button>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav>
+    <a href="#manifiesto"><em>01</em>Mundo</a>
+    <a href="#servicios"><em>02</em>Oficio</a>
+    <a href="#obras"><em>03</em>Obras</a>
+    <a href="#proceso"><em>04</em>Proceso</a>
+    <a href="#contacto"><em>05</em>Contacto</a>
+  </nav>
+  <p class="menu-foot">Chillán, Chile — <a href="mailto:hola@ezryn.cl">hola@ezryn.cl</a></p>
+</div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-kicker reveal">Luis · Diseño Digital INACAP · Chillán, Chile</p>
+    <h1 class="hero-title" aria-label="ezryn">
+      <span class="line"><span class="fill">ezryn</span></span>
+      <span class="line outline" aria-hidden="true"><span>ezryn</span></span>
+    </h1>
+    <p class="hero-sub reveal">
+      Construyo <em>mundos que se sienten vivos</em>: sitios que venden,
+      mods que ni se notan y bots que cuidan a tu gente.
+    </p>
+    <p class="hero-sub reveal" style="transition-delay:.08s">
+      Soy Luis. Trabajo solo, de la idea al despliegue — <strong>sin plantillas, sin humo.</strong>
+    </p>
+    <div class="hero-cta reveal">
+      <a class="btn big magnetic" href="#obras">Ver obras ↓</a>
+      <a class="btn ghost magnetic" href="#contacto">Pedir propuesta</a>
+    </div>
+    <div class="hero-stats reveal">
+      <div><strong><span data-count="14">0</span>+</strong><span>proyectos vivos</span></div>
+      <div><strong><span data-count="5">0</span></strong><span>mods en Fabric</span></div>
+      <div><strong><span data-count="3">0</span></strong><span>bots cuidando gente</span></div>
+      <div><strong>1</strong><span>persona, todo el flujo</span></div>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <span>sitios web — mods fabric — bots discord — pixel art — identidad — supabase — python —&nbsp;</span>
+        <span>sitios web — mods fabric — bots discord — pixel art — identidad — supabase — python —&nbsp;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFIESTO -->
+  <section class="manifiesto" id="manifiesto">
+    <p class="label reveal">01 — Manifiesto</p>
+    <h2 class="mani" id="mani">
+      <span class="mline">No hago “páginas”.</span>
+      <span class="mline">Hago <em>lugares</em> donde la gente <em>vuelve.</em></span>
+      <span class="mline dim">Un mod bueno es invisible. Un bot bueno se siente humano.</span>
+      <span class="mline dim">Y una web buena te paga el arriendo.</span>
+    </h2>
+    <div class="mani-foot reveal">
+      <p>Desde Chillán para todo Chile — diseño en Figma, código a mano, despliegue real en Render / Railway / Oracle.</p>
+      <a href="#servicios">cómo trabajo →</a>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="oficio" id="servicios">
+    <p class="label reveal">02 — Oficio</p>
+    <h2 class="sec-title reveal">Todo lo que tu proyecto necesita, <em>en una sola cabeza.</em></h2>
+    <ul class="acc" id="acc">
+      <li class="open">
+        <button class="acc-head" aria-expanded="true">
+          <span class="num">01</span>
+          <span class="t">Sitios web que venden</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Landing pages para negocios locales: diseño en Figma, HTML/CSS/JS a mano, medios de pago chilenos, botón de WhatsApp y despliegue. Rápidas, legibles y pensadas para convertir.</p>
+          <p class="tags"><span>Figma</span><span>HTML</span><span>CSS</span><span>JS</span><span>GSAP</span><span>Supabase</span></p>
+        </div>
+      </li>
+      <li>
+        <button class="acc-head" aria-expanded="false">
+          <span class="num">02</span>
+          <span class="t">Mods de Minecraft (Fabric)</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Rendimiento, calidad de vida y PvP: BoosterLite, ShieldSync, TweakyRio, SmartEco. Con pantalla de config, Mod Menu y publicación en Modrinth. Soporte ES / EN / IT / FR.</p>
+          <p class="tags"><span>Fabric</span><span>Yarn / Mojmap</span><span>Gradle</span><span>Cloth Config</span><span>Modrinth</span></p>
+        </div>
+      </li>
+      <li>
+        <button class="acc-head" aria-expanded="false">
+          <span class="num">03</span>
+          <span class="t">Bots de Discord que cuidan</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Moderación, automod, whitelist, bienvenidas y paneles interactivos en Python + discord.py. Alojados por mí, con reinicio automático. Ej: Luison, bots para Astrum SMP y comunidades.</p>
+          <p class="tags"><span>Python</span><span>discord.py</span><span>Linux</span><span>systemd</span><span>Railway</span></p>
+        </div>
+      </li>
+      <li>
+        <button class="acc-head" aria-expanded="false">
+          <span class="num">04</span>
+          <span class="t">Diseño & pixel art</span>
+          <span class="plus">+</span>
+        </button>
+        <div class="acc-body">
+          <p>Identidad, campañas y packs PvP de 16x/32x por encargo. Terracota de Chillán, morados de Auren, rojos de portada — Affinity Designer + pixel art hecho a mano.</p>
+          <p class="tags"><span>Affinity</span><span>Figma</span><span>Pixel art</span><span>Packs PvP</span></p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- OBRAS -->
+  <section class="obras" id="obras">
+    <div class="obras-head">
+      <p class="label reveal">03 — Obras selectas</p>
+      <h2 class="sec-title reveal">Seis pruebas de que <em>lo termino y lo despliego.</em></h2>
+      <div class="filters reveal" role="group" aria-label="Filtrar obras">
+        <button class="on" data-f="all">Todo</button>
+        <button data-f="web">Web</button>
+        <button data-f="mod">Mods</button>
+        <button data-f="bot">Bots</button>
+        <button data-f="dis">Diseño</button>
+      </div>
+    </div>
+
+    <div class="stack" id="stack">
+      <article class="card feat" data-cat="web" data-tilt>
+        <div class="card-media m-astrum"><span class="card-index">01</span><span class="card-arrow">↗</span></div>
+        <div class="card-body">
+          <p class="card-tags">Web · Servidor · Bot — astrum.qzz.io</p>
+          <h3>Astrum SMP</h3>
+          <p>Comunidad completa de Minecraft: web con GSAP y login Discord/Google, perfiles con Supabase, backend en Python y servidor en Oracle Cloud. Mi proyecto más grande, vivo y en uso.</p>
+          <p class="card-meta">HTML · CSS · JS · Supabase · Render · Oracle</p>
+        </div>
+      </article>
+
+      <article class="card" data-cat="mod" data-tilt>
+        <div class="card-media m-boost"><span class="card-index">02</span><span class="card-arrow">↗</span></div>
+        <div class="card-body">
+          <p class="card-tags">Mod Fabric 1.21.11</p>
+          <h3>BoosterLite</h3>
+          <p>FPS reales: poda IA de mobs, culling de entidades, recorte de partículas/sonido y perfiles que se auto-ajustan. Con asesor de JVM.</p>
+          <p class="card-meta">Fabric · Cloth Config · Modrinth</p>
+        </div>
+      </article>
+
+      <article class="card" data-cat="mod" data-tilt>
+        <div class="card-media m-shield"><span class="card-index">03</span><span class="card-arrow">↗</span></div>
+        <div class="card-body">
+          <p class="card-tags">Mod PvP · en desarrollo</p>
+          <h3>ShieldSync</h3>
+          <p>El escudo responde al instante: sincronía cliente-servidor, presets de bloqueo y balance de hachas. Hecho con y para jugadores PvP.</p>
+          <p class="card-meta">Fabric 1.21.x → 26.3</p>
+        </div>
+      </article>
+
+      <article class="card" data-cat="bot" data-tilt>
+        <div class="card-media m-luison"><span class="card-index">04</span><span class="card-arrow">↗</span></div>
+        <div class="card-body">
+          <p class="card-tags">Bot Discord · 24/7</p>
+          <h3>Luison</h3>
+          <p>Moderación, automod, warns y whitelist corriendo como servicio en mi propio servidor. Si cae, se levanta solo. Así cuido comunidades.</p>
+          <p class="card-meta">Python · discord.py · systemd</p>
+        </div>
+      </article>
+
+      <article class="card" data-cat="web" data-tilt>
+        <div class="card-media m-hilo"><span class="card-index">05</span><span class="card-arrow">↗</span></div>
+        <div class="card-body">
+          <p class="card-tags">Landing · negocio familiar</p>
+          <h3>El Hilo Que Nos Une</h3>
+          <p>Crochet con amor: logo restaurado, pagos chilenos y WhatsApp directo, todo en un archivo ultraliviano que abre hasta con mala señal.</p>
+          <p class="card-meta">HTML · CSS · JS · 1 archivo</p>
+        </div>
+      </article>
+
+      <article class="card" data-cat="dis" data-tilt>
+        <div class="card-media m-nuble"><span class="card-index">06</span><span class="card-arrow">↗</span></div>
+        <div class="card-body">
+          <p class="card-tags">Campaña · Mercado de Chillán</p>
+          <h3>Chillán Sabe</h3>
+          <p>Infografía, post, banner y pendón con paleta terracota-mostaza-oliva-crema. Diseño que huele a mercado y se lee a 10 metros.</p>
+          <p class="card-meta">Affinity Designer · 4 formatos</p>
+        </div>
+      </article>
+    </div>
+    <p class="more reveal">+ TweakyRio · SmartEco · DurabilityTools · Florería Ñuble · Auren <span>(pregúntame y te muestro)</span></p>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="proceso" id="proceso">
+    <p class="label reveal">04 — Proceso</p>
+    <h2 class="sec-title reveal">Simple, honesto y <em>sin desaparecer a mitad.</em></h2>
+    <ol class="steps">
+      <li class="reveal"><b><i>1</i>Escucho</b><p>Me cuentas por WhatsApp o correo. Te devuelvo propuesta + plazo en 48h. Sin tecnicismos.</p></li>
+      <li class="reveal"><b><i>2</i>Diseño</b><p>Boceto en Figma (o doc del mod/bot). Lo ves, lo tocas, lo cambiamos hasta que digas “ese es”.</p></li>
+      <li class="reveal"><b><i>3</i>Construyo</b><p>Código a mano, avances por video. Nada de “está casi listo” eterno: ves el progreso real.</p></li>
+      <li class="reveal"><b><i>4</i>Despego</b><p>Despliegue + traspaso + 15 días de ajustes. Tu web/mod/bot queda vivo y tú sabes mantenerlo.</p></li>
+    </ol>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <p class="label reveal">05 — Contacto</p>
+    <h2 class="bye reveal">¿Hacemos algo<br>que te dé <em>orgullo mostrar?</em></h2>
+    <p class="bye-sub reveal">Cuéntame en 2 líneas qué necesitas. Te respondo yo mismo, no un bot (bueno, Luison a veces ayuda).</p>
+    <div class="cta-row reveal">
+      <a class="btn big magnetic" href="mailto:hola@ezryn.cl">hola@ezryn.cl</a>
+      <button class="btn ghost magnetic" id="copyBtn">copiar correo</button>
+    </div>
+    <ul class="social reveal">
+      <li><a href="https://instagram.com/ezryn">Instagram ↗</a></li>
+      <li><a href="https://github.com/1Luiissss">GitHub ↗</a></li>
+      <li><a href="https://modrinth.com/">Modrinth ↗</a></li>
+      <li><a href="https://astrum.qzz.io">Astrum SMP ↗</a></li>
+    </ul>
+    <footer class="foot">
+      <p>ezryn® — hecho a mano en Chillán, Chile · <span id="year">2026</span></p>
+      <p class="mono">sin plantillas · sin IA generativa en tus diseños · <a href="#top">volver arriba ↑</a></p>
+      <p class="secret">psst — presiona <kbd>E</kbd> tres veces…</p>
+    </footer>
+  </section>
+
+</main>
+
+</body>
+</html>
