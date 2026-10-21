@@ -30,7 +30,13 @@ a{color:#a1a1aa;text-decoration:none}a:hover{color:#fff}
 .btn{display:inline-block;background:#e6e6e6;color:#111;font-size:14px;font-weight:500;padding:10px 22px;border-radius:8px}
 .btn:hover{color:#111;background:#fff}
 .pill{display:inline-block;font-size:12px;color:#ff8a8a;background:rgba(255,99,99,.12);border:1px solid rgba(255,99,99,.3);border-radius:999px;padding:4px 12px}
-.thumb{height:180px;border-radius:12px;margin-bottom:20px}
+.thumb{height:180px;border-radius:12px;margin-bottom:20px;position:relative;overflow:hidden}
+.thumbp .tp-meta{position:absolute;top:16px;left:20px;right:20px;color:var(--a1);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;gap:7px}
+.thumbp .tp-meta i{width:5px;height:5px;border-radius:50%;background:currentColor;flex:none}
+.thumbp .tp-glyph{position:absolute;right:-2px;top:-34px;font-size:150px;font-weight:800;letter-spacing:-.05em;color:rgba(255,255,255,.07);line-height:1;pointer-events:none}
+.thumbp .tp-wm{position:absolute;left:20px;bottom:36px;font-size:34px;font-weight:800;letter-spacing:-.02em;color:#f4f4f5;line-height:1}
+.thumbp .tp-wm b{color:var(--a1)}
+.thumbp .tp-sub{position:absolute;left:20px;right:20px;bottom:16px;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,244,245,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .chip{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);color:#d4d4d8;font-size:14px;padding:10px 18px;border-radius:10px}
 .pr{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:12px;font-size:14px;color:#d4d4d8}
 .pr li:before{content:"✓";color:#ff6363;margin-right:10px}
@@ -155,12 +161,12 @@ details[open] p{animation:fd .4s ease}
 <h2 class="h2">Trabajo seleccionado</h2>
 <p class="lead">Una muestra de sitios, marcas y mods en los que he trabajado.</p>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
-<div class="card"><div class="thumb" style="background:url(img/nocturne.jpg) center/cover no-repeat,radial-gradient(circle at 30% 30%,#ff8a9a,#7a1238 70%)" role="img" aria-label="NOCTURNE — tienda de lujo con estética oscura"></div><h3>NOCTURNE</h3><p>E-commerce de lujo · 2026. Tienda online de estética oscura y editorial.</p></div>
-<div class="card"><div class="thumb" style="background:url(img/inkdark.jpg) center/cover no-repeat,radial-gradient(circle at 70% 30%,#c4a1ff,#3b1565 70%)" role="img" aria-label="INKDARK — estudio de tatuajes, neo-noir"></div><h3>INKDARK</h3><p>Estudio de tatuajes · 2026. Identidad y sitio neo-noir, con alto contraste.</p></div>
-<div class="card"><div class="thumb" style="background:url(img/ficus.jpg?v=2) center/cover no-repeat,radial-gradient(circle at 50% 70%,#ffb86b,#7a2a12 70%)" role="img" aria-label="Ficus Restaurante — salón del restaurante en la ciudad"></div><h3>Ficus Restaurante</h3><p>Landing local · Chillán · 2026. Página para un restaurante de la ciudad.</p></div>
-<div class="card"><div class="thumb" style="background:url(img/jorge.jpg) center/cover no-repeat,radial-gradient(circle at 30% 70%,#ff9ec0,#5a1030 70%)" role="img" aria-label="Jorge Barber Shop — corte de barbería"></div><h3>Jorge Barber Shop</h3><p>Landing local · Chillán · 2026. Página para una barbería de la zona.</p></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#ff6b8b;--a2:#7a1238;background:radial-gradient(circle at 30% 30%,#ff6b8b,#7a1238 70%)"><div class="tp-meta"><i></i>E-commerce de lujo · Dark editorial</div><div class="tp-glyph">N</div><div class="tp-wm">NOCTURNE</div><div class="tp-sub">Tienda online · 2026</div></div><h3>NOCTURNE</h3><p>E-commerce de lujo · 2026. Tienda online de estética oscura y editorial.</p></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#c4a1ff;--a2:#3b1565;background:radial-gradient(circle at 70% 30%,#c4a1ff,#3b1565 70%)"><div class="tp-meta"><i></i>Estudio de tatuajes · Neo-noir</div><div class="tp-glyph">I</div><div class="tp-wm">INKDARK</div><div class="tp-sub">Identidad y sitio · 2026</div></div><h3>INKDARK</h3><p>Estudio de tatuajes · 2026. Identidad y sitio neo-noir, con alto contraste.</p></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#ffb86b;--a2:#7a2a12;background:radial-gradient(circle at 50% 70%,#ffb86b,#7a2a12 70%)"><div class="tp-meta"><i></i>Restaurante · Chillán</div><div class="tp-glyph">F</div><div class="tp-wm">FICUS</div><div class="tp-sub">Carta · Reservas · 2026</div></div><h3>Ficus Restaurante</h3><p>Landing local · Chillán · 2026. Página para un restaurante de la ciudad.</p></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#ff9ec0;--a2:#5a1030;background:radial-gradient(circle at 30% 70%,#ff9ec0,#5a1030 70%)"><div class="tp-meta"><i></i>Barbería · Chillán</div><div class="tp-glyph">J</div><div class="tp-wm">JORGE</div><div class="tp-sub">Barber shop · 2026</div></div><h3>Jorge Barber Shop</h3><p>Landing local · Chillán · 2026. Página para una barbería de la zona.</p></div>
 <div class="card"><div class="thumb" style="background:url(img/astrumsmp-hero.webp) center/cover no-repeat,radial-gradient(circle at 70% 70%,#8fb8ff,#16285e 70%)" role="img" aria-label="Captura del sitio de AstrumSMP"></div><h3>AstrumSMP</h3><p>Web de comunidad · 2026. Sitio y backend de un servidor de Minecraft, con animaciones GSAP.</p></div>
-<div class="card"><div class="thumb" style="background:url(img/mods.jpg?v=2) center/cover no-repeat,radial-gradient(circle at 50% 30%,#ff6b8b,#2a0716 75%)" role="img" aria-label="Mods de Minecraft — código en desarrollo"></div><h3>Mods de Minecraft</h3><p>En desarrollo · 2026. BoosterLite y SmartEco, mods de rendimiento para Fabric. Aún sin publicar.</p></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#ff6b8b;--a2:#2a0716;background:radial-gradient(circle at 50% 30%,#ff6b8b,#2a0716 75%)"><div class="tp-meta"><i></i>Minecraft · Fabric · Rendimiento</div><div class="tp-glyph">+</div><div class="tp-wm">MODS<b>+</b></div><div class="tp-sub">En desarrollo · 2026</div></div><h3>Mods de Minecraft</h3><p>En desarrollo · 2026. BoosterLite y SmartEco, mods de rendimiento para Fabric. Aún sin publicar.</p></div>
 </div>
 </section>
 
