@@ -1,272 +1,328 @@
-<!DOCTYPE html>
-<html lang="es-CL">
+<!doctype html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ezryn® — Construyo mundos que se sienten vivos</title>
-<meta name="description" content="Portafolio de ezryn (Luis, Chillán Chile): sitios web que venden, mods de Minecraft que se sienten invisibles y bots de Discord que cuidan comunidades. Diseño Digital INACAP.">
-<meta name="theme-color" content="#07070c">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307070c'/%3E%3Ctext x='32' y='44' font-family='Arial Black' font-size='34' font-weight='900' text-anchor='middle' fill='%23d8ff3d'%3Ee%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+<title>Ezrynn — Portafolio</title>
+<meta name="description" content="Portafolio de Ezrynn (Luis Vejar): diseño web, identidad visual e interfaces desde Chillán, Chile.">
+<meta name="theme-color" content="#07070a">
+<meta property="og:title" content="Ezrynn — Portafolio">
+<meta property="og:description" content="Diseño web, identidad visual e interfaces. Disponible para proyectos.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20width=%27100%27%20height=%27100%27%20rx=%2722%27%20fill=%27%23000%27/%3E%3Cpolygon%20fill=%27%23fff%27%20transform=%27translate%2821.00%2022.12%29%20scale%280.1607%29%27%20points=%27135%2C0%20134%2C117%2027%2C78%200%2C163%20111%2C198%2039%2C294%20111%2C346%20179%2C249%20248%2C346%20319%2C293%20249%2C198%20360%2C161%20332%2C78%20225%2C117%20225%2C0%27/%3E%3C/svg%3E">
+<script>document.documentElement.className+=' js'</script>
+<noscript><style>#pre{display:none}.hz,.rv,.wi{opacity:1!important;transform:none!important}.js .nav{transform:none}</style></noscript>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07070a}
+a{color:#a1a1aa;text-decoration:none}a:hover{color:#fff}
+.sec{max-width:1120px;margin:0 auto;padding:96px 24px;position:relative}
+.eb{color:#ff6363;font-size:13px;font-weight:500;display:flex;gap:8px;align-items:center;justify-content:center}
+.eb i{width:6px;height:6px;border-radius:50%;background:#ff6363;display:block}
+.h2{font-size:36px;font-weight:600;letter-spacing:-.02em;margin:12px 0 0;text-align:center;color:#f4f4f5;line-height:1.15}
+.lead{color:#9a9aa3;font-size:16px;line-height:1.6;text-align:center;max-width:560px;margin:16px auto 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:48px}
+.card{background:linear-gradient(180deg,#151117,#0d0b0f);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px}
+.card h3{margin:0 0 8px;font-size:16px;font-weight:600;color:#f4f4f5}
+.card p{margin:0;font-size:14px;line-height:1.6;color:#9a9aa3}
+.btn{display:inline-block;background:#e6e6e6;color:#111;font-size:14px;font-weight:500;padding:10px 22px;border-radius:8px}
+.btn:hover{color:#111;background:#fff}
+.pill{display:inline-block;font-size:12px;color:#ff8a8a;background:rgba(255,99,99,.12);border:1px solid rgba(255,99,99,.3);border-radius:999px;padding:4px 12px}
+.thumb{height:180px;border-radius:12px;margin-bottom:20px}
+.chip{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);color:#d4d4d8;font-size:14px;padding:10px 18px;border-radius:10px}
+.pr{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:12px;font-size:14px;color:#d4d4d8}
+.pr li:before{content:"✓";color:#ff6363;margin-right:10px}
+details{border-bottom:1px solid rgba(255,255,255,.08);padding:22px 0;color:#f4f4f5;font-size:15px;font-weight:500}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+details p{color:#9a9aa3;font-weight:400;line-height:1.6;margin:12px 0 0;font-size:14px}
+.fc{display:grid;align-content:start;gap:10px;font-size:13px}
+.cl{display:block;font-size:12px;color:#a1a1aa;margin-bottom:6px}
+.ci{display:block;width:100%;box-sizing:border-box;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.35);color:#f4f4f5;font:inherit;font-size:15px;padding:10px 0;outline:none}
+.ci:focus{border-bottom-color:#ff6363}
+.fc b{color:#f4f4f5;font-weight:500;margin-bottom:6px}
+html{scroll-behavior:smooth}
+html{scroll-padding-top:84px}
+html.lock{overflow:hidden}
+::selection{background:#ff6363;color:#fff}
+:focus-visible{outline:2px solid #ff6363;outline-offset:3px;border-radius:6px}
+/* Preloader */
+#pre{position:fixed;inset:0;z-index:200;display:grid;place-items:center;background:radial-gradient(ellipse 60% 50% at 50% 55%,rgba(190,40,90,.28),transparent 70%),#07070a;transition:transform .95s cubic-bezier(.77,0,.18,1)}
+#pre.out{transform:translateY(-100%)}
+.pre-in{width:min(340px,72vw);font-family:Inter,system-ui,sans-serif}
+.pre-word{display:inline-block;font-size:clamp(46px,9vw,72px);font-weight:700;letter-spacing:-.045em;line-height:1;background:linear-gradient(90deg,#f4f4f5 var(--p,0%),rgba(244,244,245,.12) var(--p,0%));-webkit-background-clip:text;background-clip:text;color:transparent}
+.pre-bar{height:1px;background:rgba(255,255,255,.1);margin-top:22px;overflow:hidden}
+.pre-bar i{display:block;height:100%;background:linear-gradient(90deg,#ff6363,#c2255c);transform-origin:0 50%;transform:scaleX(0)}
+.pre-meta{display:flex;justify-content:space-between;margin-top:12px;font-size:12px;letter-spacing:.1em;color:#8b8b94;text-transform:uppercase}
+/* Barra de progreso */
+#bar{position:fixed;top:0;left:0;width:100%;height:2px;z-index:90;background:linear-gradient(90deg,#ff6363,#c2255c);transform-origin:0 50%;transform:scaleX(0)}
+/* Navegacion fija */
+.nav{position:fixed;top:0;left:0;right:0;z-index:80;border-bottom:1px solid transparent;transition:background .3s,border-color .3s,backdrop-filter .3s,transform .9s cubic-bezier(.2,.7,.2,1) .25s}
+.js .nav{transform:translateY(-110%)}
+.js body.ready .nav{transform:none}
+.nav.sc{background:rgba(7,7,10,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom-color:rgba(255,255,255,.07)}
+.navin{max-width:1120px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:600;font-size:15px;color:#f4f4f5;display:inline-flex;align-items:center;gap:10px}
+.mark{height:22px;width:auto;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.logo:hover .mark{transform:rotate(72deg)}
+.links{display:flex;gap:28px;font-size:13px}
+.links a{position:relative;padding:4px 0;transition:color .2s}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:#ff6363;transform:scaleX(0);transform-origin:0 50%;transition:transform .3s}
+.links a.on{color:#fff}.links a.on::after{transform:scaleX(1)}
+@media(max-width:720px){.links{display:none}}
+/* Entrada del hero */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.wi{display:inline-block;transform:translateY(112%)}
+body.ready .wi{transform:none;transition:transform 1.05s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.hz{opacity:0;transform:translateY(26px);filter:blur(6px)}
+body.ready .hz{opacity:1;transform:none;filter:none;transition:opacity .9s ease var(--d,0s),transform 1s cubic-bezier(.2,.7,.2,1) var(--d,0s),filter .9s ease var(--d,0s)}
+/* Revelado al hacer scroll */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s ease var(--d,0s),transform 1s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.rv.done{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;transition-delay:0s}
+/* Tarjetas */
+.card{position:relative;overflow:hidden}
+.card>*{position:relative}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(360px circle at var(--mx,50%) var(--my,50%),rgba(255,99,120,.15),transparent 60%)}
+.card:hover::before{opacity:1}
+.card.in:hover{transform:translateY(-4px);border-color:rgba(255,99,99,.35)}
+.thumb{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.card:hover .thumb{transform:scale(1.03)}
+.btn{transition:transform .25s,background .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -12px rgba(255,255,255,.4)}
+.chip{transition:border-color .25s,background .25s}
+.chip:hover{border-color:rgba(255,99,99,.5);background:rgba(255,99,99,.08)}
+/* FAQ */
+summary{transition:color .2s}summary:hover{color:#fff}
+summary span{font-size:22px;line-height:1;color:#ff6363;transition:transform .3s}
+details[open] summary span{transform:rotate(45deg)}
+details[open] p{animation:fd .4s ease}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}}
+.ci.bad{border-bottom-color:#ff6363}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hz,.rv,.wi{opacity:1!important;transform:none!important;filter:none!important}
+  #pre{display:none}.js .nav{transform:none}
+}
+</style>
+
 </head>
 <body>
+<div id="pre" aria-hidden="true"><div class="pre-in"><div class="pre-word">Ezrynn</div><div class="pre-bar"><i></i></div><div class="pre-meta"><span>Diseño digital y web</span><span class="pre-num">00</span></div></div></div>
+<div id="bar" aria-hidden="true"></div>
 
-<!-- Loader -->
-<div class="loader" id="loader" aria-hidden="true">
-  <div class="loader-inner">
-    <p class="loader-kicker">cargando mundo…</p>
-    <p class="loader-word" aria-label="ezryn"><span>e</span><span>z</span><span>r</span><span>y</span><span>n</span></p>
-    <div class="loader-bar"><i id="loadBar"></i></div>
-    <p class="loader-pct"><span id="loadPct">0</span>%</p>
-  </div>
+<div style="background:#07070a;color:#f4f4f5;font-family:Inter,system-ui,sans-serif;overflow:hidden">
+
+<div id="top" style="position:relative;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(190,40,90,.55),rgba(90,15,45,.25) 55%,transparent 80%)">
+<header class="nav"><div class="navin">
+<a class="logo" href="#top" aria-label="Ezrynn, inicio"><svg class="mark" viewBox="0 0 361 347" aria-hidden="true"><polygon fill="currentColor" points="135,0 134,117 27,78 0,163 111,198 39,294 111,346 179,249 248,346 319,293 249,198 360,161 332,78 225,117 225,0"/></svg><span>Ezrynn</span></a>
+<div class="links"><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a><a href="#servicios">Servicios</a><a href="#faq">FAQ</a></div>
+<a href="#contacto" class="btn" style="padding:7px 16px;font-size:13px">Contacto</a>
+</div></header>
+<div id="hero" style="max-width:760px;margin:0 auto;padding:150px 24px 130px;text-align:center">
+<span class="pill">Disponible para proyectos</span>
+<h1 style="font-size:68px;line-height:1.04;font-weight:700;letter-spacing:-.03em;margin:28px 0 0;color:#fff">Nuevo nivel<br>de diseño web</h1>
+<p style="color:#b4a8ae;font-size:17px;line-height:1.6;margin:24px auto 0;max-width:520px">Soy Ezrynn, estudiante de diseño digital y web. Creo identidades, sitios e interfaces que se ven bien y funcionan mejor.</p>
+<div style="margin-top:36px"><a href="#proyectos" class="btn">Ver proyectos</a></div>
+<div style="margin-top:20px;font-size:12px;color:#8b8b94">Chile · Disponible para freelance</div>
+</div>
 </div>
 
-<div class="grain" aria-hidden="true"></div>
-<canvas class="dust" id="dust" aria-hidden="true"></canvas>
-<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
-<div class="toast" id="toast" role="status">copiado ✓</div>
+<section class="sec" id="sobre-mi">
+<div class="eb"><i></i>Sobre mí</div>
+<h2 class="h2">Diseño y código en un solo flujo</h2>
+<p class="lead">Pienso la idea, la dibujo y la llevo a la web. Cada proyecto parte de entender a quién le habla y termina en algo que se puede usar.</p>
+<div style="margin-top:56px;border-radius:20px;padding:56px 24px;background:radial-gradient(circle at 25% 15%,#ff8a9a,#c2255c 38%,#4a0e2a 78%);display:flex;justify-content:center">
+<div style="width:100%;max-width:560px;background:rgba(14,11,16,.94);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.5)">
+<div style="display:flex;gap:6px;margin-bottom:14px"><span style="width:9px;height:9px;border-radius:50%;background:#ff5f57"></span><span style="width:9px;height:9px;border-radius:50%;background:#febc2e"></span><span style="width:9px;height:9px;border-radius:50%;background:#28c840"></span></div>
+<div style="font-size:14px;color:#8b8b94;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08)">Buscar proyecto o servicio…</div>
+<div style="display:grid;gap:4px;margin-top:10px;font-size:13px;color:#d4d4d8">
+<div style="display:flex;gap:12px;align-items:center;padding:9px 12px;border-radius:8px;background:rgba(255,255,255,.07)"><span style="width:16px;height:16px;border-radius:4px;background:#ff6363"></span>Identidad visual<span style="margin-left:auto;color:#8b8b94">Proyecto</span></div>
+<div style="display:flex;gap:12px;align-items:center;padding:9px 12px"><span style="width:16px;height:16px;border-radius:4px;background:#c2255c"></span>Diseño de sitio web<span style="margin-left:auto;color:#8b8b94">Servicio</span></div>
+<div style="display:flex;gap:12px;align-items:center;padding:9px 12px"><span style="width:16px;height:16px;border-radius:4px;background:#8a5cf6"></span>Interfaces y prototipos<span style="margin-left:auto;color:#8b8b94">Servicio</span></div>
+<div style="display:flex;gap:12px;align-items:center;padding:9px 12px"><span style="width:16px;height:16px;border-radius:4px;background:#f59e0b"></span>Motion graphics<span style="margin-left:auto;color:#8b8b94">Proyecto</span></div>
+</div></div></div>
+<div class="grid">
+<div class="card"><h3>Identidad visual</h3><p>Logos, paletas y tipografías con una idea clara detrás, listos para usarse en todos los formatos.</p></div>
+<div class="card"><h3>Diseño y desarrollo web</h3><p>Del wireframe al sitio publicado: estructura, estilo y código limpio, adaptado a cualquier pantalla.</p></div>
+<div class="card"><h3>Interfaces y motion</h3><p>Prototipos y animaciones que explican el producto antes de que alguien lea una sola línea.</p></div>
+</div>
+</section>
 
-<!-- Nav -->
-<header class="nav" id="nav">
-  <a class="logo" href="#top">ezryn<sup>®</sup></a>
-  <div class="nav-meta">
-    <span class="live"><i></i><span id="clock">--:--</span> Chillán</span>
-    <span class="avail">disponible</span>
-  </div>
-  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
-    <span></span><span></span>
-  </button>
-</header>
+<section class="sec" id="proyectos" style="background:radial-gradient(ellipse 60% 40% at 50% 50%,rgba(120,20,60,.22),transparent 75%)">
+<div class="eb"><i></i>Proyectos</div>
+<h2 class="h2">Trabajo seleccionado</h2>
+<p class="lead">Una muestra de sitios, marcas y mods en los que he trabajado.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+<div class="card"><div class="thumb" style="background:radial-gradient(circle at 30% 30%,#ff8a9a,#7a1238 70%)"></div><h3>NOCTURNE</h3><p>E-commerce de lujo · 2026. Tienda online de estética oscura y editorial.</p></div>
+<div class="card"><div class="thumb" style="background:radial-gradient(circle at 70% 30%,#c4a1ff,#3b1565 70%)"></div><h3>INKDARK</h3><p>Estudio de tatuajes · 2026. Identidad y sitio neo-noir, con alto contraste.</p></div>
+<div class="card"><div class="thumb" style="background:radial-gradient(circle at 50% 70%,#ffb86b,#7a2a12 70%)"></div><h3>Ficus Restaurante</h3><p>Landing local · Chillán · 2026. Página para un restaurante de la ciudad.</p></div>
+<div class="card"><div class="thumb" style="background:radial-gradient(circle at 30% 70%,#ff9ec0,#5a1030 70%)"></div><h3>Jorge Barber Shop</h3><p>Landing local · Chillán · 2026. Página para una barbería de la zona.</p></div>
+<div class="card"><div class="thumb" style="background:url(img/astrumsmp-hero.webp) center/cover no-repeat,radial-gradient(circle at 70% 70%,#8fb8ff,#16285e 70%)" role="img" aria-label="Captura del sitio de AstrumSMP"></div><h3>AstrumSMP</h3><p>Web de comunidad · 2026. Sitio y backend de un servidor de Minecraft, con animaciones GSAP.</p></div>
+<div class="card"><div class="thumb" style="background:radial-gradient(circle at 50% 30%,#ff6b8b,#2a0716 75%)"></div><h3>Mods de Minecraft</h3><p>En desarrollo · 2026. BoosterLite y SmartEco, mods de rendimiento para Fabric. Aún sin publicar.</p></div>
+</div>
+</section>
 
-<div class="menu" id="menu" aria-hidden="true">
-  <nav>
-    <a href="#manifiesto"><em>01</em>Mundo</a>
-    <a href="#servicios"><em>02</em>Oficio</a>
-    <a href="#obras"><em>03</em>Obras</a>
-    <a href="#proceso"><em>04</em>Proceso</a>
-    <a href="#contacto"><em>05</em>Contacto</a>
-  </nav>
-  <p class="menu-foot">Chillán, Chile — <a href="mailto:hola@ezryn.cl">hola@ezryn.cl</a></p>
+<section class="sec" style="padding-top:40px;padding-bottom:40px">
+<div class="eb"><i></i>Herramientas</div>
+<h2 class="h2">Con lo que trabajo</h2>
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px"><span class="chip">Figma</span><span class="chip">HTML y CSS</span><span class="chip">JavaScript</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">After Effects</span></div>
+</section>
+
+<section class="sec" id="servicios">
+<div class="eb"><i></i>Servicios</div>
+<h2 class="h2">Elige cómo trabajamos</h2>
+<p class="lead">Tres formas de empezar. Ajusto el alcance y el precio a cada proyecto.</p>
+<div class="grid" style="align-items:stretch">
+<div class="card"><h3>Identidad</h3><p>Para marcas que parten de cero.</p><div style="font-size:28px;font-weight:600;margin-top:20px">A cotizar</div><ul class="pr"><li>Logo y variantes</li><li>Paleta y tipografía</li><li>Guía de uso básica</li></ul><a href="#contacto" class="btn">Cotizar</a></div>
+<div class="card" style="border-color:rgba(255,99,99,.7);box-shadow:0 0 60px rgba(255,60,100,.18)"><h3>Sitio web <span class="pill" style="margin-left:6px">Popular</span></h3><p>Diseño y desarrollo de punta a punta.</p><div style="font-size:28px;font-weight:600;margin-top:20px">A cotizar</div><ul class="pr"><li>Todo lo de Identidad</li><li>Diseño responsive</li><li>Publicación y ajustes</li><li>Soporte inicial</li></ul><a href="#contacto" class="btn">Cotizar</a></div>
+<div class="card"><h3>Rediseño</h3><p>Para sitios que necesitan un refresh.</p><div style="font-size:28px;font-weight:600;margin-top:20px">A cotizar</div><ul class="pr"><li>Auditoría de diseño</li><li>Nueva interfaz</li><li>Entrega en Figma</li></ul><a href="#contacto" class="btn">Cotizar</a></div>
+</div>
+</section>
+
+<section class="sec" id="faq" style="max-width:760px">
+<h2 class="h2" style="text-align:left;font-size:44px">Preguntas frecuentes</h2>
+<p style="color:#9a9aa3;margin:12px 0 32px">Lo que suelen preguntarme antes de empezar.</p>
+<details><summary>¿Cuánto demora un proyecto?<span aria-hidden="true">+</span></summary><p>Depende del alcance: una landing puede resolverse en pocos días; un sitio completo o una identidad toman más. Te doy un plazo claro en la propuesta.</p></details>
+<details><summary>¿Cómo es el proceso de trabajo?<span aria-hidden="true">+</span></summary><p>Parto con un brief para entender tu negocio, te envío una propuesta con alcance y plazo, avanzamos con rondas de revisión y entrego los archivos finales o el sitio publicado.</p></details>
+<details><summary>¿Trabajas con clientes de otras ciudades?<span aria-hidden="true">+</span></summary><p>Sí, todo se coordina en línea.</p></details>
+<details><summary>¿Cómo te contacto?<span aria-hidden="true">+</span></summary><p>Escríbeme a luisvejar567@gmail.com y te respondo pronto.</p></details>
+</section>
+
+<section class="sec" id="contacto" style="padding-bottom:96px;background:radial-gradient(ellipse 60% 55% at 50% 100%,rgba(190,40,90,.35),transparent 75%)">
+<div class="eb" style="justify-content:flex-start"><i></i>Contacto</div>
+<h2 style="margin:16px 0 0;font-size:clamp(64px,13vw,168px);line-height:.95;font-weight:700;letter-spacing:-.05em;color:#f4f4f5">Contáctame</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px 64px;margin-top:72px">
+<div style="display:grid;gap:32px;align-content:start;font-size:15px;color:#d4d4d8">
+<p style="margin:0;color:#9a9aa3;line-height:1.6;max-width:360px">Cuéntame tu idea y armamos el siguiente paso. Respondo lo antes posible.</p>
+<div><div class="cl">Correo</div><a href="mailto:luisvejar567@gmail.com" style="color:#d4d4d8">luisvejar567@gmail.com</a></div>
+<div><div class="cl">Teléfono</div><a href="tel:+56983428506" style="color:#d4d4d8">+56 9 8342 8506</a></div>
+<div><div class="cl">Ubicación</div>Chillán, Chile · Trabajo en línea</div>
+<div><div class="cl">Instagram</div><a href="https://www.instagram.com/1luiissssss/" style="color:#d4d4d8">@1luiissssss</a></div>
+</div>
+<div style="display:grid;gap:28px">
+<div><div class="cl" style="color:#f4f4f5;font-size:14px;margin-bottom:12px">Nombre (obligatorio)</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<label class="cl">Nombre<input class="ci" type="text"></label>
+<label class="cl">Apellido<input class="ci" type="text"></label>
+</div></div>
+<label class="cl">Correo (obligatorio)<input class="ci" type="email"></label>
+<label class="cl">Mensaje (obligatorio)<textarea class="ci" rows="3" style="resize:none"></textarea></label>
+<div><button type="button" id="send" class="btn" style="border:0;cursor:pointer;font-family:inherit">Enviar</button><span id="msg" role="status" style="margin-left:14px;font-size:13px;color:#9a9aa3"></span></div>
+</div>
+</div>
+</section>
+
+<footer style="border-top:1px solid rgba(255,255,255,.06)"><div style="max-width:1120px;margin:0 auto;padding:48px 24px;display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;color:#8b8b94;font-size:13px">
+<div style="font-weight:600;color:#f4f4f5">Ezrynn<div style="font-weight:400;color:#8b8b94;margin-top:8px">© 2026 · Diseño digital y web</div></div>
+<div class="fc"><b>Navegar</b><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a><a href="#servicios">Servicios</a></div>
+<div class="fc"><b>Redes</b><a href="https://www.instagram.com/1luiissssss/">Instagram</a></div>
+</div>
+<div aria-label="Ezrynn" style="max-width:1120px;margin:0 auto;padding:0 24px 24px;overflow:hidden;text-align:center;font-size:clamp(60px,15vw,200px);line-height:1.14;font-weight:700;letter-spacing:-.045em;background:linear-gradient(180deg,#f4f4f5 15%,rgba(244,244,245,.3));-webkit-background-clip:text;background-clip:text;color:transparent">Ezrynn</div></footer>
+
 </div>
 
-<main id="top">
+<script>
+(function(){
+var d=document,h=d.documentElement,b=d.body,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+scrollTo(0,0);
 
-  <!-- HERO -->
-  <section class="hero">
-    <p class="hero-kicker reveal">Luis · Diseño Digital INACAP · Chillán, Chile</p>
-    <h1 class="hero-title" aria-label="ezryn">
-      <span class="line"><span class="fill">ezryn</span></span>
-      <span class="line outline" aria-hidden="true"><span>ezryn</span></span>
-    </h1>
-    <p class="hero-sub reveal">
-      Construyo <em>mundos que se sienten vivos</em>: sitios que venden,
-      mods que ni se notan y bots que cuidan a tu gente.
-    </p>
-    <p class="hero-sub reveal" style="transition-delay:.08s">
-      Soy Luis. Trabajo solo, de la idea al despliegue — <strong>sin plantillas, sin humo.</strong>
-    </p>
-    <div class="hero-cta reveal">
-      <a class="btn big magnetic" href="#obras">Ver obras ↓</a>
-      <a class="btn ghost magnetic" href="#contacto">Pedir propuesta</a>
-    </div>
-    <div class="hero-stats reveal">
-      <div><strong><span data-count="14">0</span>+</strong><span>proyectos vivos</span></div>
-      <div><strong><span data-count="5">0</span></strong><span>mods en Fabric</span></div>
-      <div><strong><span data-count="3">0</span></strong><span>bots cuidando gente</span></div>
-      <div><strong>1</strong><span>persona, todo el flujo</span></div>
-    </div>
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track" id="marqueeTrack">
-        <span>sitios web — mods fabric — bots discord — pixel art — identidad — supabase — python —&nbsp;</span>
-        <span>sitios web — mods fabric — bots discord — pixel art — identidad — supabase — python —&nbsp;</span>
-      </div>
-    </div>
-  </section>
+/* Hero: palabras del titular y elementos escalonados */
+var hero=d.getElementById('hero'),h1=hero.querySelector('h1');
+(function(el){
+  var label=el.textContent.replace(/\s+/g,' ').trim(),nodes=[].slice.call(el.childNodes),i=0;
+  el.setAttribute('aria-label',label);el.textContent='';
+  nodes.forEach(function(n){
+    if(n.nodeType===3){
+      n.textContent.split(/(\s+)/).forEach(function(t){
+        if(!t)return;
+        if(/^\s+$/.test(t)){el.appendChild(d.createTextNode(' '));return}
+        var w=d.createElement('span'),s=d.createElement('span');
+        w.className='w';w.setAttribute('aria-hidden','true');s.className='wi';s.textContent=t;
+        s.style.setProperty('--d',(0.1+i*0.09)+'s');w.appendChild(s);el.appendChild(w);i++;
+      });
+    }else{el.appendChild(n)}
+  });
+})(h1);
+[].forEach.call(hero.children,function(c,i){if(c!==h1){c.classList.add('hz');c.style.setProperty('--d',(0.35+i*0.13)+'s')}});
 
-  <!-- MANIFIESTO -->
-  <section class="manifiesto" id="manifiesto">
-    <p class="label reveal">01 — Manifiesto</p>
-    <h2 class="mani" id="mani">
-      <span class="mline">No hago “páginas”.</span>
-      <span class="mline">Hago <em>lugares</em> donde la gente <em>vuelve.</em></span>
-      <span class="mline dim">Un mod bueno es invisible. Un bot bueno se siente humano.</span>
-      <span class="mline dim">Y una web buena te paga el arriendo.</span>
-    </h2>
-    <div class="mani-foot reveal">
-      <p>Desde Chillán para todo Chile — diseño en Figma, código a mano, despliegue real en Render / Railway / Oracle.</p>
-      <a href="#servicios">cómo trabajo →</a>
-    </div>
-  </section>
+/* Pantalla de carga */
+var pre=d.getElementById('pre');
+function go(){b.classList.add('ready')}
+if(rm||!pre){if(pre)pre.remove();h.classList.remove('lock');go()}
+else{
+  var word=pre.querySelector('.pre-word'),num=pre.querySelector('.pre-num'),fill=pre.querySelector('.pre-bar i');
+  var loaded=false,t0=performance.now(),dur=1600;
+  h.classList.add('lock');
+  Promise.all([
+    (d.fonts&&d.fonts.ready)?d.fonts.ready:Promise.resolve(),
+    new Promise(function(r){if(d.readyState==='complete')r();else addEventListener('load',r)})
+  ]).then(function(){loaded=true});
+  setTimeout(function(){loaded=true},4000);
+  (function tick(now){
+    var p=Math.min((now-t0)/dur,1),v=1-Math.pow(1-p,3);
+    if(!loaded)v=Math.min(v,0.92);
+    word.style.setProperty('--p',(v*100)+'%');
+    num.textContent=String(Math.round(v*100)).padStart(2,'0');
+    fill.style.transform='scaleX('+v+')';
+    if(p>=1&&loaded){
+      pre.classList.add('out');h.classList.remove('lock');
+      setTimeout(go,380);setTimeout(function(){pre.remove()},1100);return;
+    }
+    requestAnimationFrame(tick);
+  })(t0);
+}
 
-  <!-- SERVICIOS -->
-  <section class="oficio" id="servicios">
-    <p class="label reveal">02 — Oficio</p>
-    <h2 class="sec-title reveal">Todo lo que tu proyecto necesita, <em>en una sola cabeza.</em></h2>
-    <ul class="acc" id="acc">
-      <li class="open">
-        <button class="acc-head" aria-expanded="true">
-          <span class="num">01</span>
-          <span class="t">Sitios web que venden</span>
-          <span class="plus">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Landing pages para negocios locales: diseño en Figma, HTML/CSS/JS a mano, medios de pago chilenos, botón de WhatsApp y despliegue. Rápidas, legibles y pensadas para convertir.</p>
-          <p class="tags"><span>Figma</span><span>HTML</span><span>CSS</span><span>JS</span><span>GSAP</span><span>Supabase</span></p>
-        </div>
-      </li>
-      <li>
-        <button class="acc-head" aria-expanded="false">
-          <span class="num">02</span>
-          <span class="t">Mods de Minecraft (Fabric)</span>
-          <span class="plus">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Rendimiento, calidad de vida y PvP: BoosterLite, ShieldSync, TweakyRio, SmartEco. Con pantalla de config, Mod Menu y publicación en Modrinth. Soporte ES / EN / IT / FR.</p>
-          <p class="tags"><span>Fabric</span><span>Yarn / Mojmap</span><span>Gradle</span><span>Cloth Config</span><span>Modrinth</span></p>
-        </div>
-      </li>
-      <li>
-        <button class="acc-head" aria-expanded="false">
-          <span class="num">03</span>
-          <span class="t">Bots de Discord que cuidan</span>
-          <span class="plus">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Moderación, automod, whitelist, bienvenidas y paneles interactivos en Python + discord.py. Alojados por mí, con reinicio automático. Ej: Luison, bots para Astrum SMP y comunidades.</p>
-          <p class="tags"><span>Python</span><span>discord.py</span><span>Linux</span><span>systemd</span><span>Railway</span></p>
-        </div>
-      </li>
-      <li>
-        <button class="acc-head" aria-expanded="false">
-          <span class="num">04</span>
-          <span class="t">Diseño & pixel art</span>
-          <span class="plus">+</span>
-        </button>
-        <div class="acc-body">
-          <p>Identidad, campañas y packs PvP de 16x/32x por encargo. Terracota de Chillán, morados de Auren, rojos de portada — Affinity Designer + pixel art hecho a mano.</p>
-          <p class="tags"><span>Affinity</span><span>Figma</span><span>Pixel art</span><span>Packs PvP</span></p>
-        </div>
-      </li>
-    </ul>
-  </section>
+/* Revelado al hacer scroll */
+var sel='.sec .eb,.sec .h2,.sec .lead,.grid .card,details,.chip,#sobre-mi>div[style*="border-radius:20px"],#contacto>h2,#contacto>div:not(.eb),footer>div';
+var items=[].slice.call(d.querySelectorAll(sel)).filter(function(el){return !el.closest('#hero')});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');io.unobserve(el);
+  setTimeout(function(){el.classList.add('done')},1600);
+})},{threshold:0.12,rootMargin:'0px 0px -6% 0px'});
+items.forEach(function(el){
+  var idx=[].indexOf.call(el.parentNode.children,el);
+  el.classList.add('rv');el.style.setProperty('--d',(Math.min(idx,6)*0.08)+'s');io.observe(el);
+});
 
-  <!-- OBRAS -->
-  <section class="obras" id="obras">
-    <div class="obras-head">
-      <p class="label reveal">03 — Obras selectas</p>
-      <h2 class="sec-title reveal">Seis pruebas de que <em>lo termino y lo despliego.</em></h2>
-      <div class="filters reveal" role="group" aria-label="Filtrar obras">
-        <button class="on" data-f="all">Todo</button>
-        <button data-f="web">Web</button>
-        <button data-f="mod">Mods</button>
-        <button data-f="bot">Bots</button>
-        <button data-f="dis">Diseño</button>
-      </div>
-    </div>
+/* Barra de progreso, nav y seccion activa */
+var nav=d.querySelector('.nav'),bar=d.getElementById('bar'),busy=false;
+function onScroll(){
+  var max=h.scrollHeight-innerHeight;
+  bar.style.transform='scaleX('+(max>0?Math.min(scrollY/max,1):0)+')';
+  nav.classList.toggle('sc',scrollY>20);busy=false;
+}
+addEventListener('scroll',function(){if(!busy){busy=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+var links=[].slice.call(d.querySelectorAll('.links a'));
+var so=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting)links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)});
+})},{rootMargin:'-45% 0px -50% 0px'});
+links.forEach(function(a){var s=d.querySelector(a.getAttribute('href'));if(s)so.observe(s)});
 
-    <div class="stack" id="stack">
-      <article class="card feat" data-cat="web" data-tilt>
-        <div class="card-media m-astrum"><span class="card-index">01</span><span class="card-arrow">↗</span></div>
-        <div class="card-body">
-          <p class="card-tags">Web · Servidor · Bot — astrum.qzz.io</p>
-          <h3>Astrum SMP</h3>
-          <p>Comunidad completa de Minecraft: web con GSAP y login Discord/Google, perfiles con Supabase, backend en Python y servidor en Oracle Cloud. Mi proyecto más grande, vivo y en uso.</p>
-          <p class="card-meta">HTML · CSS · JS · Supabase · Render · Oracle</p>
-        </div>
-      </article>
+/* Luz que sigue al cursor en las tarjetas */
+d.querySelectorAll('.card').forEach(function(c){
+  c.addEventListener('pointermove',function(e){
+    var r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+});
 
-      <article class="card" data-cat="mod" data-tilt>
-        <div class="card-media m-boost"><span class="card-index">02</span><span class="card-arrow">↗</span></div>
-        <div class="card-body">
-          <p class="card-tags">Mod Fabric 1.21.11</p>
-          <h3>BoosterLite</h3>
-          <p>FPS reales: poda IA de mobs, culling de entidades, recorte de partículas/sonido y perfiles que se auto-ajustan. Con asesor de JVM.</p>
-          <p class="card-meta">Fabric · Cloth Config · Modrinth</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="mod" data-tilt>
-        <div class="card-media m-shield"><span class="card-index">03</span><span class="card-arrow">↗</span></div>
-        <div class="card-body">
-          <p class="card-tags">Mod PvP · en desarrollo</p>
-          <h3>ShieldSync</h3>
-          <p>El escudo responde al instante: sincronía cliente-servidor, presets de bloqueo y balance de hachas. Hecho con y para jugadores PvP.</p>
-          <p class="card-meta">Fabric 1.21.x → 26.3</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="bot" data-tilt>
-        <div class="card-media m-luison"><span class="card-index">04</span><span class="card-arrow">↗</span></div>
-        <div class="card-body">
-          <p class="card-tags">Bot Discord · 24/7</p>
-          <h3>Luison</h3>
-          <p>Moderación, automod, warns y whitelist corriendo como servicio en mi propio servidor. Si cae, se levanta solo. Así cuido comunidades.</p>
-          <p class="card-meta">Python · discord.py · systemd</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="web" data-tilt>
-        <div class="card-media m-hilo"><span class="card-index">05</span><span class="card-arrow">↗</span></div>
-        <div class="card-body">
-          <p class="card-tags">Landing · negocio familiar</p>
-          <h3>El Hilo Que Nos Une</h3>
-          <p>Crochet con amor: logo restaurado, pagos chilenos y WhatsApp directo, todo en un archivo ultraliviano que abre hasta con mala señal.</p>
-          <p class="card-meta">HTML · CSS · JS · 1 archivo</p>
-        </div>
-      </article>
-
-      <article class="card" data-cat="dis" data-tilt>
-        <div class="card-media m-nuble"><span class="card-index">06</span><span class="card-arrow">↗</span></div>
-        <div class="card-body">
-          <p class="card-tags">Campaña · Mercado de Chillán</p>
-          <h3>Chillán Sabe</h3>
-          <p>Infografía, post, banner y pendón con paleta terracota-mostaza-oliva-crema. Diseño que huele a mercado y se lee a 10 metros.</p>
-          <p class="card-meta">Affinity Designer · 4 formatos</p>
-        </div>
-      </article>
-    </div>
-    <p class="more reveal">+ TweakyRio · SmartEco · DurabilityTools · Florería Ñuble · Auren <span>(pregúntame y te muestro)</span></p>
-  </section>
-
-  <!-- PROCESO -->
-  <section class="proceso" id="proceso">
-    <p class="label reveal">04 — Proceso</p>
-    <h2 class="sec-title reveal">Simple, honesto y <em>sin desaparecer a mitad.</em></h2>
-    <ol class="steps">
-      <li class="reveal"><b><i>1</i>Escucho</b><p>Me cuentas por WhatsApp o correo. Te devuelvo propuesta + plazo en 48h. Sin tecnicismos.</p></li>
-      <li class="reveal"><b><i>2</i>Diseño</b><p>Boceto en Figma (o doc del mod/bot). Lo ves, lo tocas, lo cambiamos hasta que digas “ese es”.</p></li>
-      <li class="reveal"><b><i>3</i>Construyo</b><p>Código a mano, avances por video. Nada de “está casi listo” eterno: ves el progreso real.</p></li>
-      <li class="reveal"><b><i>4</i>Despego</b><p>Despliegue + traspaso + 15 días de ajustes. Tu web/mod/bot queda vivo y tú sabes mantenerlo.</p></li>
-    </ol>
-  </section>
-
-  <!-- CONTACTO -->
-  <section class="contacto" id="contacto">
-    <p class="label reveal">05 — Contacto</p>
-    <h2 class="bye reveal">¿Hacemos algo<br>que te dé <em>orgullo mostrar?</em></h2>
-    <p class="bye-sub reveal">Cuéntame en 2 líneas qué necesitas. Te respondo yo mismo, no un bot (bueno, Luison a veces ayuda).</p>
-    <div class="cta-row reveal">
-      <a class="btn big magnetic" href="mailto:hola@ezryn.cl">hola@ezryn.cl</a>
-      <button class="btn ghost magnetic" id="copyBtn">copiar correo</button>
-    </div>
-    <ul class="social reveal">
-      <li><a href="https://instagram.com/ezryn">Instagram ↗</a></li>
-      <li><a href="https://github.com/1Luiissss">GitHub ↗</a></li>
-      <li><a href="https://modrinth.com/">Modrinth ↗</a></li>
-      <li><a href="https://astrum.qzz.io">Astrum SMP ↗</a></li>
-    </ul>
-    <footer class="foot">
-      <p>ezryn® — hecho a mano en Chillán, Chile · <span id="year">2026</span></p>
-      <p class="mono">sin plantillas · sin IA generativa en tus diseños · <a href="#top">volver arriba ↑</a></p>
-      <p class="secret">psst — presiona <kbd>E</kbd> tres veces…</p>
-    </footer>
-  </section>
-
-</main>
-
+/* Formulario: valida y abre el correo */
+var send=d.getElementById('send'),msg=d.getElementById('msg'),f=[].slice.call(d.querySelectorAll('#contacto .ci'));
+if(send&&f.length>=4)send.addEventListener('click',function(){
+  f.forEach(function(x){x.classList.remove('bad')});
+  var n=f[0].value.trim(),a=f[1].value.trim(),mail=f[2].value.trim(),t=f[3].value.trim(),ok=true;
+  if(!n){f[0].classList.add('bad');ok=false}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)){f[2].classList.add('bad');ok=false}
+  if(!t){f[3].classList.add('bad');ok=false}
+  if(!ok){msg.textContent='Completa tu nombre, un correo válido y el mensaje.';msg.style.color='#ff8a8a';return}
+  var body='Hola, soy '+n+(a?' '+a:'')+' ('+mail+').\n\n'+t;
+  location.href='mailto:luisvejar567@gmail.com?subject='+encodeURIComponent('Contacto desde el portafolio')+'&body='+encodeURIComponent(body);
+  msg.textContent='Abriendo tu app de correo…';msg.style.color='#9a9aa3';
+});
+})();
+</script>
 </body>
 </html>
