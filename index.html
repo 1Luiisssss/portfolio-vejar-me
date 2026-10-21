@@ -37,7 +37,8 @@ a{color:#a1a1aa;text-decoration:none}a:hover{color:#fff}
 .thumbp .tp-wm{position:absolute;left:20px;bottom:36px;font-size:34px;font-weight:800;letter-spacing:-.02em;color:#f4f4f5;line-height:1}
 .thumbp .tp-wm b{color:var(--a1)}
 .thumbp .tp-sub{position:absolute;left:20px;right:20px;bottom:16px;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,244,245,.55);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.chip{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);color:#d4d4d8;font-size:14px;padding:10px 18px;border-radius:10px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);color:#d4d4d8;font-size:14px;padding:10px 16px;border-radius:10px}
+.chip img{width:17px;height:17px;object-fit:contain;flex:none}
 .pr{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:12px;font-size:14px;color:#d4d4d8}
 .pr li:before{content:"✓";color:#ff6363;margin-right:10px}
 details{border-bottom:1px solid rgba(255,255,255,.08);padding:22px 0;color:#f4f4f5;font-size:15px;font-weight:500}
@@ -174,7 +175,7 @@ details[open] p{animation:fd .4s ease}
 <section class="sec" style="padding-top:40px;padding-bottom:40px">
 <div class="eb"><i></i>Herramientas</div>
 <h2 class="h2">Con lo que trabajo</h2>
-<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px"><span class="chip">Figma</span><span class="chip">HTML y CSS</span><span class="chip">JavaScript</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">After Effects</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px"><span class="chip"><img src="img/ic/figma.png" alt="" loading="lazy">Figma</span><span class="chip"><img src="img/ic/html5.png" alt="" loading="lazy"><img src="img/ic/css3.png" alt="" loading="lazy">HTML y CSS</span><span class="chip"><img src="img/ic/js.png" alt="" loading="lazy">JavaScript</span><span class="chip"><img src="img/ic/ps.png" alt="" loading="lazy">Photoshop</span><span class="chip"><img src="img/ic/ai.png" alt="" loading="lazy">Illustrator</span><span class="chip"><img src="img/ic/ae.png" alt="" loading="lazy">After Effects</span></div>
 </section>
 
 <section class="sec" id="servicios">
