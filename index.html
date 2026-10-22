@@ -164,9 +164,9 @@ details[open] p{animation:fd .4s ease}
 <div style="background:#07070a;color:#f4f4f5;font-family:Inter,system-ui,sans-serif;overflow:hidden">
 
 <header class="nav"><div class="navin">
-<a class="logo" href="#top" aria-label="Ezrynn, inicio"><svg class="mark" viewBox="0 0 361 347" aria-hidden="true"><polygon fill="currentColor" points="135,0 134,117 27,78 0,163 111,198 39,294 111,346 179,249 248,346 319,293 249,198 360,161 332,78 225,117 225,0"/></svg><span>Ezrynn</span></a>
+<a class="logo" href="#top" aria-label="Ezrynn, inicio" data-en-aria="Ezrynn, home"><svg class="mark" viewBox="0 0 361 347" aria-hidden="true"><polygon fill="currentColor" points="135,0 134,117 27,78 0,163 111,198 39,294 111,346 179,249 248,346 319,293 249,198 360,161 332,78 225,117 225,0"/></svg><span>Ezrynn</span></a>
 <div class="links"><a href="#proyectos" data-en="Projects">Proyectos</a><a href="#sobre-mi" data-en="About">Sobre mí</a><a href="#servicios" data-en="Services">Servicios</a><a href="#faq">FAQ</a></div>
-<div style="display:flex;align-items:center;gap:12px"><button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
+<div style="display:flex;align-items:center;gap:12px"><button class="lang" id="lang" type="button" aria-label="Cambiar a inglés">EN</button>
 <a href="#contacto" class="btn" style="padding:7px 16px;font-size:13px" data-en="Contact">Contacto</a></div>
 </div></header>
 <main>
@@ -326,7 +326,7 @@ function applyLang(l){
   d.title=L.title;
   var md=d.querySelector('meta[name="description"]');if(md)md.setAttribute('content',L.desc);
   var lb=d.getElementById('lang');
-  if(lb){lb.textContent=l==='es'?'EN':'ES';lb.setAttribute('aria-label',l==='es'?'Switch to English':'Cambiar a español')}
+  if(lb){lb.textContent=l==='es'?'EN':'ES';lb.setAttribute('aria-label',l==='es'?'Cambiar a inglés':'Switch to Spanish')}
   var hh=d.getElementById('hero');
   if(hh){var ht=hh.querySelector('h1');if(ht)ht.setAttribute('aria-label',(ht.innerText||ht.textContent).replace(/\s+/g,' ').trim())}
 }
