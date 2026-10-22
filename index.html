@@ -120,15 +120,6 @@ summary{transition:color .2s}summary:hover{color:#fff}
 summary .plus{font-size:22px;line-height:1;color:#ff6363;transition:transform .3s}
 details[open] summary .plus{transform:rotate(45deg)}
 details[open] p{animation:fd .4s ease}
-/* Sobre mí: leer más */
-.about-more{border-bottom:0;padding:0;margin-top:24px;font-weight:400}
-.about-more summary{display:inline-flex;justify-content:flex-start;gap:8px;color:#ff6363;font-size:13px;font-weight:500;line-height:1.2}
-.about-more summary:hover{color:#fff}
-.about-more summary .plus{font-size:18px}
-.about-more .less-label{display:none}
-.about-more[open] .more-label{display:none}
-.about-more[open] .less-label{display:inline}
-.about-more p,.about-more .lead{text-align:left;margin:14px 0 0;max-width:none;font-size:15px;line-height:1.65;color:#9a9aa3;font-weight:400}
 /* WhatsApp flotante (móvil) */
 .wa-float{position:fixed;right:18px;bottom:18px;z-index:75;width:50px;height:50px;border-radius:50%;display:none;place-items:center;background:rgba(13,11,15,.92);border:1px solid rgba(255,99,99,.6);color:#ff6363;box-shadow:0 12px 30px -12px rgba(0,0,0,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:transform .2s,border-color .2s,background .2s}
 .wa-float:hover{transform:translateY(-2px);border-color:#ff6363;background:#151117;color:#fff}
@@ -224,13 +215,7 @@ details[open] p{animation:fd .4s ease}
 <img src="img/luis.jpg" alt="Luis Vejar, diseñador web" data-en-alt="Luis Vejar, web designer" width="800" height="1000" onload="this.parentNode.classList.add('has-photo')" onerror="this.remove()">
 <figcaption>Luis Vejar · Chillán, Chile</figcaption>
 </figure>
-<div>
-<p class="lead" style="text-align:left;margin:0;max-width:none" data-en-html="I'm Luis Vejar, a digital designer from Chillán. I design identities and websites for brands and businesses that want to look professional and work better. I come from running <a href='https://zenithstudio.qzz.io' target='_blank' rel='noopener' style='color:#ff6363;text-decoration:underline'>AstrumSMP</a>, a Minecraft server with its community and roadmap; that's where I learned to care about detail, performance and copy.">Soy Luis Vejar, diseñador digital de Chillán. Diseño identidades y sitios para marcas y negocios que quieren verse profesionales y funcionar mejor. Vengo de administrar <a href="https://zenithstudio.qzz.io" target="_blank" rel="noopener" style="color:#ff6363;text-decoration:underline">AstrumSMP</a>, un servidor de Minecraft con su comunidad y su roadmap; ahí aprendí a cuidar el detalle, el rendimiento y los textos.</p>
-<details class="about-more">
-<summary><span class="more-label" data-en="Read more">Leer más</span><span class="less-label" data-en="Read less">Leer menos</span><span class="plus" aria-hidden="true">+</span></summary>
-<p class="lead" data-en-html="I study Digital Design and sign my work as Ezrynn. I care about design that reads fast: clear hierarchy, concise copy and a clean implementation. I work with Figma, HTML, CSS and JavaScript; when the project calls for it, I add motion and animation. I also care about the details you barely notice: speed, accessibility and making everything work on any screen.">Estudio Diseño Digital y firmo como Ezrynn. Me interesa el diseño que se entiende rápido: jerarquía clara, texto justo y una implementación limpia. Trabajo con Figma, HTML, CSS y JavaScript; cuando el proyecto lo pide, sumo motion y animaciones. También cuido los detalles que casi no se ven: velocidad, accesibilidad y que todo funcione en cualquier pantalla.</p>
-</details>
-</div>
+<p class="lead" style="text-align:left;margin:0;max-width:none" data-en-html="I'm Luis Vejar, a digital designer from Chillán. I study Digital Design and sign my work as Ezrynn. I design identities and websites for brands that want to look professional and work better: clear hierarchy, concise copy and a clean implementation. I come from running <a href='https://zenithstudio.qzz.io' target='_blank' rel='noopener' style='color:#ff6363;text-decoration:underline'>AstrumSMP</a>, a Minecraft server with its community and roadmap; that's where I learned to care about detail, performance and copy.">Soy Luis Vejar, diseñador digital de Chillán. Estudio Diseño Digital y firmo como Ezrynn. Diseño identidades y sitios para marcas que quieren verse profesionales y funcionar mejor: jerarquía clara, texto justo y una implementación limpia. Vengo de administrar <a href="https://zenithstudio.qzz.io" target="_blank" rel="noopener" style="color:#ff6363;text-decoration:underline">AstrumSMP</a>, un servidor de Minecraft con su comunidad y su roadmap; ahí aprendí a cuidar el detalle, el rendimiento y los textos.</p>
 </section>
 
 <section class="sec" style="padding-top:40px;padding-bottom:40px">
