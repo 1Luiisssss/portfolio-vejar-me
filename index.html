@@ -16,13 +16,18 @@
 <meta property="og:locale" content="es_CL">
 <meta property="og:site_name" content="Ezrynn">
 <meta name="twitter:card" content="summary_large_image">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;">
+<link rel="canonical" href="https://vejar.me/">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://vejar.goatcounter.com; connect-src 'self' https://vejar.goatcounter.com;">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://vejar.me/#business","name":"Ezrynn","alternateName":"Luis Vejar","url":"https://vejar.me/","image":"https://vejar.me/og.jpg","logo":"https://vejar.me/og.jpg","email":"luis@vejar.me","telephone":"+56983428506","description":"Diseño web, identidad visual e interfaces desde Chillán, Chile.","priceRange":"$$","address":{"@type":"PostalAddress","addressLocality":"Chillán","addressRegion":"Ñuble","addressCountry":"CL"},"areaServed":["CL","Worldwide"],"sameAs":["https://www.instagram.com/1luiissssss/"],"founder":{"@type":"Person","name":"Luis Vejar","sameAs":["https://www.instagram.com/1luiissssss/"]}}
+</script>
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%20100%20100%27%3E%3Crect%20width=%27100%27%20height=%27100%27%20rx=%2722%27%20fill=%27%23000%27/%3E%3Cpolygon%20fill=%27%23fff%27%20transform=%27translate%2821.00%2022.12%29%20scale%280.1607%29%27%20points=%27135%2C0%20134%2C117%2027%2C78%200%2C163%20111%2C198%2039%2C294%20111%2C346%20179%2C249%20248%2C346%20319%2C293%20249%2C198%20360%2C161%20332%2C78%20225%2C117%20225%2C0%27/%3E%3C/svg%3E">
 <script>document.documentElement.className+=' js'</script>
 <noscript><style>#pre{display:none}.hz,.rv,.wi{opacity:1!important;transform:none!important}.js .nav{transform:none}</style></noscript>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script data-goatcounter="https://vejar.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <style>
 body{margin:0;background:#07070a}
 a{color:#a1a1aa;text-decoration:none}a:hover{color:#fff}
@@ -110,8 +115,8 @@ body.ready .hz{opacity:1;transform:none;filter:none;transition:opacity .9s ease 
 .chip:hover{border-color:rgba(255,99,99,.5);background:rgba(255,99,99,.08)}
 /* FAQ */
 summary{transition:color .2s}summary:hover{color:#fff}
-summary span{font-size:22px;line-height:1;color:#ff6363;transition:transform .3s}
-details[open] summary span{transform:rotate(45deg)}
+summary .plus{font-size:22px;line-height:1;color:#ff6363;transition:transform .3s}
+details[open] summary .plus{transform:rotate(45deg)}
 details[open] p{animation:fd .4s ease}
 @keyframes fd{from{opacity:0;transform:translateY(-6px)}}
 .ci.bad{border-bottom-color:#ff6363}
@@ -120,124 +125,169 @@ details[open] p{animation:fd .4s ease}
   .hz,.rv,.wi{opacity:1!important;transform:none!important;filter:none!important}
   #pre{display:none}.js .nav{transform:none}
 }
+/* Selector de idioma */
+.lang{border:1px solid rgba(255,255,255,.16);background:transparent;color:#d4d4d8;font-family:inherit;font-size:11px;font-weight:600;letter-spacing:.1em;padding:6px 10px;border-radius:8px;cursor:pointer;line-height:1;transition:border-color .2s,color .2s,background .2s}
+.lang:hover{border-color:rgba(255,99,99,.6);color:#fff;background:rgba(255,99,99,.08)}
+/* Sobre mí: retrato */
+.about-grid{display:grid;grid-template-columns:minmax(220px,320px) 1fr;gap:44px;align-items:start;margin-top:56px}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:32px}}
+.portrait{position:relative;margin:0;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:linear-gradient(160deg,#1c1016,#0d0b0f);aspect-ratio:4/5}
+.portrait img{position:absolute;inset:0;z-index:1;width:100%;height:100%;object-fit:cover;filter:grayscale(.45) contrast(1.06);transition:filter .6s,transform .9s}
+.portrait:hover img{filter:grayscale(0);transform:scale(1.03)}
+.p-fallback{position:absolute;inset:0;z-index:2;display:grid;place-items:center;font-size:76px;font-weight:700;letter-spacing:-.04em;color:rgba(244,244,245,.1);transition:opacity .4s}
+.portrait.has-photo .p-fallback{opacity:0;visibility:hidden}
+.portrait figcaption{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:16px 18px;font-size:12px;color:#d4d4d8;background:linear-gradient(0deg,rgba(7,7,10,.92),rgba(7,7,10,0))}
+/* Botón de caso */
+.case-btn{background:none;border:0;padding:0;margin-top:16px;font-family:inherit;font-size:13px;font-weight:500;color:#ff6363;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.case-btn:hover{color:#fff}
+.case-btn i{font-style:normal;transition:transform .25s}
+.case-btn:hover i{transform:translateX(4px)}
+/* Diálogo caso */
+.case{border:1px solid rgba(255,255,255,.13);border-radius:18px;background:#0d0b0f;color:#f4f4f5;width:calc(100% - 32px);max-width:780px;max-height:calc(100vh - 32px);overflow:auto;padding:0;box-shadow:0 40px 120px rgba(0,0,0,.65)}
+.case::backdrop{background:rgba(4,4,7,.72);backdrop-filter:blur(6px)}
+.case-in{position:relative;padding:40px 36px 36px;font-family:Inter,system-ui,sans-serif}
+.case-x{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:transparent;color:#d4d4d8;font-size:18px;line-height:1;cursor:pointer;font-family:inherit}
+.case-x:hover{border-color:rgba(255,99,99,.6);color:#fff}
+.case h3{font-size:30px;letter-spacing:-.02em;margin:14px 0 6px;color:#f4f4f5}
+.case-sub{color:#9a9aa3;font-size:14px;margin:0}
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px;padding-top:26px;border-top:1px solid rgba(255,255,255,.08)}
+.case-grid h4{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#ff6363;margin:0 0 10px}
+.case-grid p{font-size:14px;line-height:1.65;color:#b8b8c0;margin:0}
+@media(max-width:720px){.case-grid{grid-template-columns:1fr;gap:18px}.case-in{padding:34px 22px 26px}}
 </style>
 
 </head>
 <body>
-<div id="pre" aria-hidden="true"><div class="pre-in"><div class="pre-word">Ezrynn</div><div class="pre-bar"><i></i></div><div class="pre-meta"><span>Diseño digital y web</span><span class="pre-num">00</span></div></div></div>
+<div id="pre" aria-hidden="true"><div class="pre-in"><div class="pre-word">Ezrynn</div><div class="pre-bar"><i></i></div><div class="pre-meta"><span data-en="Digital &amp; web design">Diseño digital y web</span><span class="pre-num">00</span></div></div></div>
 <div id="bar" aria-hidden="true"></div>
 
 <div style="background:#07070a;color:#f4f4f5;font-family:Inter,system-ui,sans-serif;overflow:hidden">
 
-<div id="top" style="position:relative;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(190,40,90,.55),rgba(90,15,45,.25) 55%,transparent 80%)">
 <header class="nav"><div class="navin">
 <a class="logo" href="#top" aria-label="Ezrynn, inicio"><svg class="mark" viewBox="0 0 361 347" aria-hidden="true"><polygon fill="currentColor" points="135,0 134,117 27,78 0,163 111,198 39,294 111,346 179,249 248,346 319,293 249,198 360,161 332,78 225,117 225,0"/></svg><span>Ezrynn</span></a>
-<div class="links"><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a><a href="#servicios">Servicios</a><a href="#faq">FAQ</a></div>
-<a href="#contacto" class="btn" style="padding:7px 16px;font-size:13px">Contacto</a>
+<div class="links"><a href="#proyectos" data-en="Projects">Proyectos</a><a href="#sobre-mi" data-en="About">Sobre mí</a><a href="#servicios" data-en="Services">Servicios</a><a href="#faq">FAQ</a></div>
+<div style="display:flex;align-items:center;gap:12px"><button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
+<a href="#contacto" class="btn" style="padding:7px 16px;font-size:13px" data-en="Contact">Contacto</a></div>
 </div></header>
+<main>
+<div id="top" style="position:relative;background:radial-gradient(ellipse 70% 55% at 50% 0%,rgba(190,40,90,.55),rgba(90,15,45,.25) 55%,transparent 80%)">
 <div id="hero" style="max-width:760px;margin:0 auto;padding:150px 24px 130px;text-align:center">
-<span class="pill">Disponible para proyectos</span>
-<h1 style="font-size:68px;line-height:1.04;font-weight:700;letter-spacing:-.03em;margin:28px 0 0;color:#fff">Nuevo nivel<br>de diseño web</h1>
-<p style="color:#b4a8ae;font-size:17px;line-height:1.6;margin:24px auto 0;max-width:520px">Soy Ezrynn, estudiante de diseño digital y web. Creo identidades, sitios e interfaces que se ven bien y funcionan mejor.</p>
-<div style="margin-top:36px"><a href="#proyectos" class="btn">Ver proyectos</a></div>
-<div style="margin-top:20px;font-size:12px;color:#8b8b94">Chile · Disponible para freelance</div>
+<span class="pill" data-en="Available for projects">Disponible para proyectos</span>
+<h1 style="font-size:clamp(44px,11vw,68px);line-height:1.04;font-weight:700;letter-spacing:-.03em;margin:28px 0 0;color:#fff" data-en-html="A new level<br>of web design">Nuevo nivel<br>de diseño web</h1>
+<p style="color:#b4a8ae;font-size:17px;line-height:1.6;margin:24px auto 0;max-width:520px" data-en="I'm Ezrynn, a digital and web design student. I create identities, websites and interfaces that look good and work better.">Soy Ezrynn, estudiante de diseño digital y web. Creo identidades, sitios e interfaces que se ven bien y funcionan mejor.</p>
+<div style="margin-top:36px"><a href="#proyectos" class="btn" data-en="View projects">Ver proyectos</a></div>
+<div style="margin-top:20px;font-size:12px;color:#8b8b94" data-en="Chile · Available for freelance work">Chile · Disponible para freelance</div>
 </div>
 </div>
 
 <section class="sec" id="sobre-mi">
-<div class="eb"><i></i>Sobre mí</div>
-<h2 class="h2">Diseño y código en un solo flujo</h2>
-<p class="lead">Pienso la idea, la dibujo y la llevo a la web. Cada proyecto parte de entender a quién le habla y termina en algo que se puede usar.</p>
-<div style="margin-top:56px;border-radius:20px;padding:56px 24px;background:radial-gradient(circle at 25% 15%,#ff8a9a,#c2255c 38%,#4a0e2a 78%);display:flex;justify-content:center">
-<div style="width:100%;max-width:560px;background:rgba(14,11,16,.94);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:18px;box-shadow:0 30px 80px rgba(0,0,0,.5)">
-<div style="display:flex;gap:6px;margin-bottom:14px"><span style="width:9px;height:9px;border-radius:50%;background:#ff5f57"></span><span style="width:9px;height:9px;border-radius:50%;background:#febc2e"></span><span style="width:9px;height:9px;border-radius:50%;background:#28c840"></span></div>
-<div style="font-size:14px;color:#8b8b94;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.08)">Buscar proyecto o servicio…</div>
-<div style="display:grid;gap:4px;margin-top:10px;font-size:13px;color:#d4d4d8">
-<div style="display:flex;gap:12px;align-items:center;padding:9px 12px;border-radius:8px;background:rgba(255,255,255,.07)"><span style="width:16px;height:16px;border-radius:4px;background:#ff6363"></span>Identidad visual<span style="margin-left:auto;color:#8b8b94">Proyecto</span></div>
-<div style="display:flex;gap:12px;align-items:center;padding:9px 12px"><span style="width:16px;height:16px;border-radius:4px;background:#c2255c"></span>Diseño de sitio web<span style="margin-left:auto;color:#8b8b94">Servicio</span></div>
-<div style="display:flex;gap:12px;align-items:center;padding:9px 12px"><span style="width:16px;height:16px;border-radius:4px;background:#8a5cf6"></span>Interfaces y prototipos<span style="margin-left:auto;color:#8b8b94">Servicio</span></div>
-<div style="display:flex;gap:12px;align-items:center;padding:9px 12px"><span style="width:16px;height:16px;border-radius:4px;background:#f59e0b"></span>Motion graphics<span style="margin-left:auto;color:#8b8b94">Proyecto</span></div>
-</div></div></div>
-<p class="lead" style="margin:40px auto 0;max-width:660px">Soy <b style="color:#f4f4f5">Luis Vejar</b>, de Chillán, y estudio Diseño Digital. <b style="color:#f4f4f5">Ezrynn</b> es cómo firmo lo que diseño. Llegué por una puerta poco común: administrar un servidor privado de Minecraft — <a href="https://zenithstudio.qzz.io" target="_blank" rel="noopener" style="color:#ff6363">AstrumSMP</a> — con su comunidad, su roadmap y su mantenimiento; ahí me quedé pegado al detalle: rendimiento, versiones, textos que no sobran. Hoy eso alimenta mi trabajo: webs que se ven bien y están listas para producción, para marcas y negocios locales.</p>
+<div class="eb"><i></i><span data-en="About me">Sobre mí</span></div>
+<h2 class="h2" data-en="Design and code in one flow">Diseño y código en un solo flujo</h2>
+<p class="lead" data-en="I think the idea, sketch it and take it to the web. Every project starts by understanding who it's speaking to and ends in something people can use.">Pienso la idea, la dibujo y la llevo a la web. Cada proyecto parte de entender a quién le habla y termina en algo que se puede usar.</p>
+<div class="about-grid">
+<figure class="portrait">
+<div class="p-fallback" aria-hidden="true">LV</div>
+<img src="img/luis.jpg" alt="Luis Vejar, diseñador web" data-en-alt="Luis Vejar, web designer" width="800" height="1000" loading="lazy" onload="this.parentNode.classList.add('has-photo')" onerror="this.remove()">
+<figcaption>Luis Vejar · Chillán, Chile</figcaption>
+</figure>
+<p class="lead" style="text-align:left;margin:0;max-width:none" data-en-html="I'm <b style='color:#f4f4f5'>Luis Vejar</b>, from Chillán, and I study Digital Design. <b style='color:#f4f4f5'>Ezrynn</b> is how I sign what I design. I got here through an unusual door: running a private Minecraft server — <a href='https://zenithstudio.qzz.io' target='_blank' rel='noopener' style='color:#ff6363;text-decoration:underline'>AstrumSMP</a> — with its community, roadmap and maintenance; that's where I got hooked on detail: performance, versions, copy that says exactly what it needs to. Today that feeds my work: websites that look good and are ready for production, for local brands and businesses.">Soy <b style="color:#f4f4f5">Luis Vejar</b>, de Chillán, y estudio Diseño Digital. <b style="color:#f4f4f5">Ezrynn</b> es cómo firmo lo que diseño. Llegué por una puerta poco común: administrar un servidor privado de Minecraft — <a href="https://zenithstudio.qzz.io" target="_blank" rel="noopener" style="color:#ff6363;text-decoration:underline">AstrumSMP</a> — con su comunidad, su roadmap y su mantenimiento; ahí me quedé pegado al detalle: rendimiento, versiones, textos que no sobran. Hoy eso alimenta mi trabajo: webs que se ven bien y están listas para producción, para marcas y negocios locales.</p>
+</div>
 <div class="grid">
-<div class="card"><h3>Identidad visual</h3><p>Logos, paletas y tipografías con una idea clara detrás, listos para usarse en todos los formatos.</p></div>
-<div class="card"><h3>Diseño y desarrollo web</h3><p>Del wireframe al sitio publicado: estructura, estilo y código limpio, adaptado a cualquier pantalla.</p></div>
-<div class="card"><h3>Interfaces y motion</h3><p>Prototipos y animaciones que explican el producto antes de que alguien lea una sola línea.</p></div>
+<div class="card"><h3 data-en="Visual identity">Identidad visual</h3><p data-en="Logos, palettes and typefaces with a clear idea behind them, ready to be used in every format.">Logos, paletas y tipografías con una idea clara detrás, listos para usarse en todos los formatos.</p></div>
+<div class="card"><h3 data-en="Web design &amp; development">Diseño y desarrollo web</h3><p data-en="From wireframe to published site: structure, style and clean code, ready for any screen.">Del wireframe al sitio publicado: estructura, estilo y código limpio, adaptado a cualquier pantalla.</p></div>
+<div class="card"><h3 data-en="Interfaces &amp; motion">Interfaces y motion</h3><p data-en="Prototypes and animations that explain the product before anyone reads a single line.">Prototipos y animaciones que explican el producto antes de que alguien lea una sola línea.</p></div>
 </div>
 </section>
 
 <section class="sec" id="proyectos" style="background:radial-gradient(ellipse 60% 40% at 50% 50%,rgba(120,20,60,.22),transparent 75%)">
-<div class="eb"><i></i>Proyectos</div>
-<h2 class="h2">Trabajo seleccionado</h2>
-<p class="lead">Una muestra de sitios, marcas y mods en los que he trabajado.</p>
+<div class="eb"><i></i><span data-en="Projects">Proyectos</span></div>
+<h2 class="h2" data-en="Selected work">Trabajo seleccionado</h2>
+<p class="lead" data-en="A selection of websites, brands and mods I've worked on.">Una muestra de sitios, marcas y mods en los que he trabajado.</p>
 <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
-<div class="card"><div class="thumb thumbp" style="--a1:#ff6b8b;--a2:#7a1238;background:radial-gradient(circle at 30% 30%,#ff6b8b,#7a1238 70%)"><div class="tp-meta"><i></i>E-commerce de lujo · Dark editorial</div><div class="tp-glyph">N</div><div class="tp-wm">NOCTURNE</div><div class="tp-sub">Tienda online · 2026</div></div><h3>NOCTURNE</h3><p>E-commerce de lujo · 2026. Tienda online de estética oscura y editorial.</p></div>
-<div class="card"><div class="thumb thumbp" style="--a1:#c4a1ff;--a2:#3b1565;background:radial-gradient(circle at 70% 30%,#c4a1ff,#3b1565 70%)"><div class="tp-meta"><i></i>Estudio de tatuajes · Neo-noir</div><div class="tp-glyph">I</div><div class="tp-wm">INKDARK</div><div class="tp-sub">Identidad y sitio · 2026</div></div><h3>INKDARK</h3><p>Estudio de tatuajes · 2026. Identidad y sitio neo-noir, con alto contraste.</p></div>
-<div class="card"><div class="thumb thumbp" style="--a1:#ffb86b;--a2:#7a2a12;background:radial-gradient(circle at 50% 70%,#ffb86b,#7a2a12 70%)"><div class="tp-meta"><i></i>Restaurante · Chillán</div><div class="tp-glyph">F</div><div class="tp-wm">FICUS</div><div class="tp-sub">Carta · Reservas · 2026</div></div><h3>Ficus Restaurante</h3><p>Landing local · Chillán · 2026. Página para un restaurante de la ciudad.</p></div>
-<div class="card"><div class="thumb thumbp" style="--a1:#ff9ec0;--a2:#5a1030;background:radial-gradient(circle at 30% 70%,#ff9ec0,#5a1030 70%)"><div class="tp-meta"><i></i>Barbería · Chillán</div><div class="tp-glyph">J</div><div class="tp-wm">JORGE</div><div class="tp-sub">Barber shop · 2026</div></div><h3>Jorge Barber Shop</h3><p>Landing local · Chillán · 2026. Página para una barbería de la zona.</p></div>
-<div class="card"><div class="thumb" style="background:url(img/astrumsmp-hero.webp) center/cover no-repeat,radial-gradient(circle at 70% 70%,#8fb8ff,#16285e 70%)" role="img" aria-label="Captura del sitio de AstrumSMP"></div><h3>AstrumSMP</h3><p>Web de comunidad · 2026. Sitio y backend de un servidor de Minecraft, con animaciones GSAP.</p></div>
-<div class="card"><div class="thumb thumbp" style="--a1:#ff6b8b;--a2:#2a0716;background:radial-gradient(circle at 50% 30%,#ff6b8b,#2a0716 75%)"><div class="tp-meta"><i></i>Minecraft · Fabric · Rendimiento</div><div class="tp-glyph">+</div><div class="tp-wm">MODS<b>+</b></div><div class="tp-sub">En desarrollo · 2026</div></div><h3>Mods de Minecraft</h3><p>En desarrollo · 2026. BoosterLite y SmartEco, mods de rendimiento para Fabric. Aún sin publicar.</p></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#ff6b8b;--a2:#7a1238;background:radial-gradient(circle at 30% 30%,#ff6b8b,#7a1238 70%)"><div class="tp-meta"><i></i><span data-en="Luxury e-commerce · Dark editorial">E-commerce de lujo · Dark editorial</span></div><div class="tp-glyph">N</div><div class="tp-wm">NOCTURNE</div><div class="tp-sub" data-en="Online store · 2026">Tienda online · 2026</div></div><h3>NOCTURNE</h3><p data-en="Luxury e-commerce · 2026. An online store with a dark, editorial aesthetic.">E-commerce de lujo · 2026. Tienda online de estética oscura y editorial.</p><button class="case-btn" type="button" data-case="nocturne"><span data-en="View case">Ver caso</span><i>→</i></button></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#c4a1ff;--a2:#3b1565;background:radial-gradient(circle at 70% 30%,#c4a1ff,#3b1565 70%)"><div class="tp-meta"><i></i><span data-en="Tattoo studio · Neo-noir">Estudio de tatuajes · Neo-noir</span></div><div class="tp-glyph">I</div><div class="tp-wm">INKDARK</div><div class="tp-sub" data-en="Identity and website · 2026">Identidad y sitio · 2026</div></div><h3>INKDARK</h3><p data-en="Tattoo studio · 2026. Neo-noir identity and website with high contrast.">Estudio de tatuajes · 2026. Identidad y sitio neo-noir, con alto contraste.</p><button class="case-btn" type="button" data-case="inkdark"><span data-en="View case">Ver caso</span><i>→</i></button></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#ffb86b;--a2:#7a2a12;background:radial-gradient(circle at 50% 70%,#ffb86b,#7a2a12 70%)"><div class="tp-meta"><i></i><span data-en="Restaurant · Chillán">Restaurante · Chillán</span></div><div class="tp-glyph">F</div><div class="tp-wm">FICUS</div><div class="tp-sub" data-en="Menu · Reservations · 2026">Carta · Reservas · 2026</div></div><h3 data-en="Ficus Restaurant">Ficus Restaurante</h3><p data-en="Local landing · Chillán · 2026. A website for a restaurant in the city.">Landing local · Chillán · 2026. Página para un restaurante de la ciudad.</p><button class="case-btn" type="button" data-case="ficus"><span data-en="View case">Ver caso</span><i>→</i></button></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#ff9ec0;--a2:#5a1030;background:radial-gradient(circle at 30% 70%,#ff9ec0,#5a1030 70%)"><div class="tp-meta"><i></i><span data-en="Barbershop · Chillán">Barbería · Chillán</span></div><div class="tp-glyph">J</div><div class="tp-wm">JORGE</div><div class="tp-sub" data-en="Barber shop · 2026">Barber shop · 2026</div></div><h3>Jorge Barber Shop</h3><p data-en="Local landing · Chillán · 2026. A website for a local barbershop.">Landing local · Chillán · 2026. Página para una barbería de la zona.</p><button class="case-btn" type="button" data-case="jorge"><span data-en="View case">Ver caso</span><i>→</i></button></div>
+<div class="card"><div class="thumb" style="background:url(img/astrumsmp-hero.webp) center/cover no-repeat,radial-gradient(circle at 70% 70%,#8fb8ff,#16285e 70%)" role="img" aria-label="Captura del sitio de AstrumSMP" data-en-aria="AstrumSMP website screenshot"></div><h3>AstrumSMP</h3><p data-en="Community website · 2026. Website and backend for a Minecraft server, with GSAP animations.">Web de comunidad · 2026. Sitio y backend de un servidor de Minecraft, con animaciones GSAP.</p><button class="case-btn" type="button" data-case="astrumsmp"><span data-en="View case">Ver caso</span><i>→</i></button></div>
+<div class="card"><div class="thumb thumbp" style="--a1:#ff6b8b;--a2:#2a0716;background:radial-gradient(circle at 50% 30%,#ff6b8b,#2a0716 75%)"><div class="tp-meta"><i></i><span data-en="Minecraft · Fabric · Performance">Minecraft · Fabric · Rendimiento</span></div><div class="tp-glyph">+</div><div class="tp-wm">MODS<b>+</b></div><div class="tp-sub" data-en="In development · 2026">En desarrollo · 2026</div></div><h3 data-en="Minecraft Mods">Mods de Minecraft</h3><p data-en="In development · 2026. BoosterLite and SmartEco, performance mods for Fabric. Not published yet.">En desarrollo · 2026. BoosterLite y SmartEco, mods de rendimiento para Fabric. Aún sin publicar.</p><button class="case-btn" type="button" data-case="mods"><span data-en="View case">Ver caso</span><i>→</i></button></div>
 </div>
 </section>
 
 <section class="sec" style="padding-top:40px;padding-bottom:40px">
-<div class="eb"><i></i>Herramientas</div>
-<h2 class="h2">Con lo que trabajo</h2>
-<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px"><span class="chip"><img src="img/ic/figma.png" alt="" loading="lazy">Figma</span><span class="chip"><img src="img/ic/html5.png" alt="" loading="lazy"><img src="img/ic/css3.png" alt="" loading="lazy">HTML y CSS</span><span class="chip"><img src="img/ic/js.png" alt="" loading="lazy">JavaScript</span><span class="chip"><img src="img/ic/ps.png" alt="" loading="lazy">Photoshop</span><span class="chip"><img src="img/ic/ai.png" alt="" loading="lazy">Illustrator</span><span class="chip"><img src="img/ic/ae.png" alt="" loading="lazy">After Effects</span></div>
+<div class="eb"><i></i><span data-en="Tools">Herramientas</span></div>
+<h2 class="h2" data-en="What I work with">Con lo que trabajo</h2>
+<div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px"><span class="chip"><img src="img/ic/figma.png" alt="" loading="lazy">Figma</span><span class="chip"><img src="img/ic/html5.png" alt="" loading="lazy"><img src="img/ic/css3.png" alt="" loading="lazy"><span data-en="HTML &amp; CSS">HTML y CSS</span></span><span class="chip"><img src="img/ic/js.png" alt="" loading="lazy">JavaScript</span><span class="chip"><img src="img/ic/ps.png" alt="" loading="lazy">Photoshop</span><span class="chip"><img src="img/ic/ai.png" alt="" loading="lazy">Illustrator</span><span class="chip"><img src="img/ic/ae.png" alt="" loading="lazy">After Effects</span></div>
 </section>
 
 <section class="sec" id="servicios">
-<div class="eb"><i></i>Servicios</div>
-<h2 class="h2">Elige cómo trabajamos</h2>
-<p class="lead">Tres formas de empezar. Ajusto el alcance y el precio a cada proyecto.</p>
+<div class="eb"><i></i><span data-en="Services">Servicios</span></div>
+<h2 class="h2" data-en="Choose how we work">Elige cómo trabajamos</h2>
+<p class="lead" data-en="Three ways to start. I tailor scope and price to each project.">Tres formas de empezar. Ajusto el alcance y el precio a cada proyecto.</p>
 <div class="grid" style="align-items:stretch">
-<div class="card"><h3>Identidad</h3><p>Para marcas que parten de cero.</p><div style="font-size:28px;font-weight:600;margin-top:20px">A cotizar</div><ul class="pr"><li>Logo y variantes</li><li>Paleta y tipografía</li><li>Guía de uso básica</li></ul><a href="#contacto" class="btn">Cotizar</a></div>
-<div class="card" style="border-color:rgba(255,99,99,.7);box-shadow:0 0 60px rgba(255,60,100,.18)"><h3>Sitio web <span class="pill" style="margin-left:6px">Popular</span></h3><p>Diseño y desarrollo de punta a punta.</p><div style="font-size:28px;font-weight:600;margin-top:20px">A cotizar</div><ul class="pr"><li>Todo lo de Identidad</li><li>Diseño responsive</li><li>Publicación y ajustes</li><li>Soporte inicial</li></ul><a href="#contacto" class="btn">Cotizar</a></div>
-<div class="card"><h3>Rediseño</h3><p>Para sitios que necesitan un refresh.</p><div style="font-size:28px;font-weight:600;margin-top:20px">A cotizar</div><ul class="pr"><li>Auditoría de diseño</li><li>Nueva interfaz</li><li>Entrega en Figma</li></ul><a href="#contacto" class="btn">Cotizar</a></div>
+<div class="card"><h3 data-en="Identity">Identidad</h3><p data-en="For brands starting from scratch.">Para marcas que parten de cero.</p><div style="font-size:26px;font-weight:600;margin-top:20px"><span data-en="From CLP $150.000">Desde CLP $150.000</span></div><div style="font-size:12px;color:#8b8b94;margin-top:4px">≈ US$160</div><ul class="pr"><li data-en="Logo and variations">Logo y variantes</li><li data-en="Palette and typography">Paleta y tipografía</li><li data-en="Basic usage guide">Guía de uso básica</li></ul><a href="#contacto" class="btn" data-en="Get a quote">Cotizar</a></div>
+<div class="card" style="border-color:rgba(255,99,99,.7);box-shadow:0 0 60px rgba(255,60,100,.18)"><h3><span data-en="Website">Sitio web</span> <span class="pill" style="margin-left:6px" data-en="Popular">Popular</span></h3><p data-en="End-to-end design and development.">Diseño y desarrollo de punta a punta.</p><div style="font-size:26px;font-weight:600;margin-top:20px"><span data-en="From CLP $250.000">Desde CLP $250.000</span></div><div style="font-size:12px;color:#8b8b94;margin-top:4px">≈ US$265</div><ul class="pr"><li data-en="Everything in Identity">Todo lo de Identidad</li><li data-en="Responsive design">Diseño responsive</li><li data-en="Launch and tweaks">Publicación y ajustes</li><li data-en="Initial support">Soporte inicial</li></ul><a href="#contacto" class="btn" data-en="Get a quote">Cotizar</a></div>
+<div class="card"><h3 data-en="Redesign">Rediseño</h3><p data-en="For websites that need a refresh.">Para sitios que necesitan un refresh.</p><div style="font-size:26px;font-weight:600;margin-top:20px"><span data-en="From CLP $120.000">Desde CLP $120.000</span></div><div style="font-size:12px;color:#8b8b94;margin-top:4px">≈ US$130</div><ul class="pr"><li data-en="Design audit">Auditoría de diseño</li><li data-en="New interface">Nueva interfaz</li><li data-en="Figma delivery">Entrega en Figma</li></ul><a href="#contacto" class="btn" data-en="Get a quote">Cotizar</a></div>
 </div>
+<p style="text-align:center;color:#8b8b94;font-size:12px;margin:22px 0 0" data-en="Reference prices in CLP; the final quote depends on scope.">Valores referenciales en CLP; el precio final depende del alcance.</p>
 </section>
 
 <section class="sec" id="faq" style="max-width:760px">
-<h2 class="h2" style="text-align:left;font-size:44px">Preguntas frecuentes</h2>
-<p style="color:#9a9aa3;margin:12px 0 32px">Lo que suelen preguntarme antes de empezar.</p>
-<details><summary>¿Cuánto demora un proyecto?<span aria-hidden="true">+</span></summary><p>Depende del alcance: una landing puede resolverse en pocos días; un sitio completo o una identidad toman más. Te doy un plazo claro en la propuesta.</p></details>
-<details><summary>¿Cómo es el proceso de trabajo?<span aria-hidden="true">+</span></summary><p>Parto con un brief para entender tu negocio, te envío una propuesta con alcance y plazo, avanzamos con rondas de revisión y entrego los archivos finales o el sitio publicado.</p></details>
-<details><summary>¿Trabajas con clientes de otras ciudades?<span aria-hidden="true">+</span></summary><p>Sí, todo se coordina en línea.</p></details>
-<details><summary>¿Cómo te contacto?<span aria-hidden="true">+</span></summary><p>Escríbeme a luis@vejar.me y te respondo pronto.</p></details>
+<h2 class="h2" style="text-align:left;font-size:44px" data-en="Frequently asked questions">Preguntas frecuentes</h2>
+<p style="color:#9a9aa3;margin:12px 0 32px" data-en="What people usually ask me before we start.">Lo que suelen preguntarme antes de empezar.</p>
+<details><summary><span data-en="How long does a project take?">¿Cuánto demora un proyecto?</span><span class="plus" aria-hidden="true">+</span></summary><p data-en="It depends on scope: a landing page can be done in a few days; a full site or an identity takes longer. You get a clear timeline in the proposal.">Depende del alcance: una landing puede resolverse en pocos días; un sitio completo o una identidad toman más. Te doy un plazo claro en la propuesta.</p></details>
+<details><summary><span data-en="What's the process like?">¿Cómo es el proceso de trabajo?</span><span class="plus" aria-hidden="true">+</span></summary><p data-en="We start with a brief to understand your business, I send a proposal with scope and timeline, we go through review rounds, and I deliver the final files or the published site.">Parto con un brief para entender tu negocio, te envío una propuesta con alcance y plazo, avanzamos con rondas de revisión y entrego los archivos finales o el sitio publicado.</p></details>
+<details><summary><span data-en="Do you work with clients from other cities?">¿Trabajas con clientes de otras ciudades?</span><span class="plus" aria-hidden="true">+</span></summary><p data-en="Yes, everything is coordinated online.">Sí, todo se coordina en línea.</p></details>
+<details><summary><span data-en="How can I contact you?">¿Cómo te contacto?</span><span class="plus" aria-hidden="true">+</span></summary><p data-en="Email me at luis@vejar.me and I'll reply soon.">Escríbeme a luis@vejar.me y te respondo pronto.</p></details>
 </section>
 
 <section class="sec" id="contacto" style="padding-bottom:96px;background:radial-gradient(ellipse 60% 55% at 50% 100%,rgba(190,40,90,.35),transparent 75%)">
-<div class="eb" style="justify-content:flex-start"><i></i>Contacto</div>
-<h2 style="margin:16px 0 0;font-size:clamp(64px,13vw,168px);line-height:.95;font-weight:700;letter-spacing:-.05em;color:#f4f4f5">Contáctame</h2>
+<div class="eb" style="justify-content:flex-start"><i></i><span data-en="Contact">Contacto</span></div>
+<h2 style="margin:16px 0 0;font-size:clamp(64px,13vw,168px);line-height:.95;font-weight:700;letter-spacing:-.05em;color:#f4f4f5" data-en="Let's talk">Contáctame</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px 64px;margin-top:72px">
 <div style="display:grid;gap:32px;align-content:start;font-size:15px;color:#d4d4d8">
-<p style="margin:0;color:#9a9aa3;line-height:1.6;max-width:360px">Cuéntame tu idea y armamos el siguiente paso. Respondo lo antes posible.</p>
-<div><div class="cl">Correo</div><a href="mailto:luis@vejar.me" style="color:#d4d4d8">luis@vejar.me</a></div>
+<p style="margin:0;color:#9a9aa3;line-height:1.6;max-width:360px" data-en="Tell me your idea and we'll plan the next step. I reply as soon as possible.">Cuéntame tu idea y armamos el siguiente paso. Respondo lo antes posible.</p>
+<div><div class="cl" data-en="Email">Correo</div><a href="mailto:luis@vejar.me" style="color:#d4d4d8">luis@vejar.me</a></div>
 <div><div class="cl">WhatsApp</div><a href="https://wa.me/56983428506?text=Hola%20Luis%2C%20vi%20tu%20portafolio%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener" style="color:#d4d4d8">+56 9 8342 8506</a></div>
-<div><div class="cl">Ubicación</div>Chillán, Chile · Trabajo en línea</div>
+<div><div class="cl" data-en="Location">Ubicación</div><span data-en="Chillán, Chile · Working online">Chillán, Chile · Trabajo en línea</span></div>
 <div><div class="cl">Instagram</div><a href="https://www.instagram.com/1luiissssss/" style="color:#d4d4d8">@1luiissssss</a></div>
 </div>
 <div style="display:grid;gap:28px">
-<div><div class="cl" style="color:#f4f4f5;font-size:14px;margin-bottom:12px">Nombre (obligatorio)</div>
+<div><div class="cl" style="color:#f4f4f5;font-size:14px;margin-bottom:12px" data-en="Name (required)">Nombre (obligatorio)</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
-<label class="cl">Nombre<input class="ci" type="text"></label>
-<label class="cl">Apellido<input class="ci" type="text"></label>
+<label class="cl"><span data-en="Name">Nombre</span><input class="ci" type="text"></label>
+<label class="cl"><span data-en="Last name">Apellido</span><input class="ci" type="text"></label>
 </div></div>
-<label class="cl">Correo (obligatorio)<input class="ci" type="email"></label>
-<label class="cl">Mensaje (obligatorio)<textarea class="ci" rows="3" style="resize:none"></textarea></label>
-<div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px"><button type="button" id="send" class="btn" style="border:0;cursor:pointer;font-family:inherit">Enviar</button><a class="btn" href="https://wa.me/56983428506?text=Hola%20Luis%2C%20vi%20tu%20portafolio%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener" style="border:0;cursor:pointer">WhatsApp →</a><span id="msg" role="status" style="font-size:13px;color:#9a9aa3"></span></div>
+<label class="cl"><span data-en="Email (required)">Correo (obligatorio)</span><input class="ci" type="email"></label>
+<label class="cl"><span data-en="Message (required)">Mensaje (obligatorio)</span><textarea class="ci" rows="3" style="resize:none"></textarea></label>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px"><button type="button" id="send" class="btn" style="border:0;cursor:pointer;font-family:inherit" data-en="Send">Enviar</button><a class="btn" href="https://wa.me/56983428506?text=Hola%20Luis%2C%20vi%20tu%20portafolio%20y%20quiero%20consultar%20por%20un%20proyecto" target="_blank" rel="noopener" style="border:0;cursor:pointer">WhatsApp →</a><span id="msg" role="status" style="font-size:13px;color:#9a9aa3"></span></div>
 </div>
 </div>
 </section>
+</main>
 
 <footer style="border-top:1px solid rgba(255,255,255,.06)"><div style="max-width:1120px;margin:0 auto;padding:48px 24px;display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between;color:#8b8b94;font-size:13px">
-<div style="font-weight:600;color:#f4f4f5">Ezrynn<div style="font-weight:400;color:#8b8b94;margin-top:8px">© 2026 · Diseño digital y web</div></div>
-<div class="fc"><b>Navegar</b><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a><a href="#servicios">Servicios</a></div>
-<div class="fc"><b>Redes</b><a href="https://www.instagram.com/1luiissssss/">Instagram</a></div>
+<div style="font-weight:600;color:#f4f4f5">Ezrynn<div style="font-weight:400;color:#8b8b94;margin-top:8px" data-en="© 2026 · Digital &amp; web design">© 2026 · Diseño digital y web</div></div>
+<div class="fc"><b data-en="Browse">Navegar</b><a href="#proyectos" data-en="Projects">Proyectos</a><a href="#sobre-mi" data-en="About">Sobre mí</a><a href="#servicios" data-en="Services">Servicios</a></div>
+<div class="fc"><b data-en="Social">Redes</b><a href="https://www.instagram.com/1luiissssss/">Instagram</a></div>
 </div>
 <div aria-label="Ezrynn" style="max-width:1120px;margin:0 auto;padding:0 24px 24px;overflow:hidden;text-align:center;font-size:clamp(60px,15vw,200px);line-height:1.14;font-weight:700;letter-spacing:-.045em;background:linear-gradient(180deg,#f4f4f5 15%,rgba(244,244,245,.3));-webkit-background-clip:text;background-clip:text;color:transparent">Ezrynn</div></footer>
 
 </div>
+
+<dialog class="case" id="case" aria-labelledby="case-title">
+<div class="case-in">
+<button class="case-x" id="case-x" type="button" aria-label="Cerrar" data-en-aria="Close">×</button>
+<div class="eb" style="justify-content:flex-start"><i></i><span id="case-kind"></span></div>
+<h3 id="case-title"></h3>
+<p class="case-sub" id="case-sub"></p>
+<div class="case-grid">
+<div><h4 data-en="Problem">Problema</h4><p id="case-p"></p></div>
+<div><h4 data-en="Solution">Solución</h4><p id="case-s"></p></div>
+<div><h4 data-en="Result">Resultado</h4><p id="case-r"></p></div>
+</div>
+<div style="margin-top:30px"><a href="#contacto" class="btn" id="case-cta" data-en="I want something like this">Quiero algo así</a></div>
+</div>
+</dialog>
 
 <script>
 (function(){
@@ -245,10 +295,52 @@ var d=document,h=d.documentElement,b=d.body,rm=matchMedia('(prefers-reduced-moti
 if('scrollRestoration' in history)history.scrollRestoration='manual';
 scrollTo(0,0);
 
+/* Idioma ES/EN */
+var I18N={
+  es:{title:'Ezrynn — Portafolio',desc:'Portafolio de Ezrynn (Luis Vejar): diseño web, identidad visual e interfaces desde Chillán, Chile.',fill:'Completa tu nombre, un correo válido y el mensaje.',opening:'Abriendo tu app de correo…',subject:'Contacto desde el portafolio — '},
+  en:{title:'Ezrynn — Portfolio',desc:'Ezrynn (Luis Vejar) portfolio: web design, visual identity and interfaces from Chillán, Chile.',fill:'Please fill in your name, a valid email and a message.',opening:'Opening your mail app…',subject:'Portfolio contact — '}
+};
+var lang='es';
+try{if(localStorage.getItem('lang')==='en')lang='en'}catch(e){}
+function T(){return I18N[lang]}
+function applyLang(l){
+  lang=l;
+  var L=I18N[l];
+  h.setAttribute('lang',l);
+  [].forEach.call(d.querySelectorAll('[data-en],[data-en-html]'),function(el){
+    if(el.dataset.esHtml===undefined)el.dataset.esHtml=el.innerHTML;
+    el.innerHTML=l==='en'?(el.getAttribute('data-en-html')||el.getAttribute('data-en')):el.dataset.esHtml;
+  });
+  [].forEach.call(d.querySelectorAll('[data-en-ph]'),function(el){
+    if(el.dataset.esPh===undefined)el.dataset.esPh=el.getAttribute('placeholder')||'';
+    el.setAttribute('placeholder',l==='en'?el.getAttribute('data-en-ph'):el.dataset.esPh);
+  });
+  [].forEach.call(d.querySelectorAll('[data-en-alt]'),function(el){
+    if(el.dataset.esAlt===undefined)el.dataset.esAlt=el.getAttribute('alt')||'';
+    el.setAttribute('alt',l==='en'?el.getAttribute('data-en-alt'):el.dataset.esAlt);
+  });
+  [].forEach.call(d.querySelectorAll('[data-en-aria]'),function(el){
+    if(el.dataset.esAria===undefined)el.dataset.esAria=el.getAttribute('aria-label')||'';
+    el.setAttribute('aria-label',l==='en'?el.getAttribute('data-en-aria'):el.dataset.esAria);
+  });
+  d.title=L.title;
+  var md=d.querySelector('meta[name="description"]');if(md)md.setAttribute('content',L.desc);
+  var lb=d.getElementById('lang');
+  if(lb){lb.textContent=l==='es'?'EN':'ES';lb.setAttribute('aria-label',l==='es'?'Switch to English':'Cambiar a español')}
+  var hh=d.getElementById('hero');
+  if(hh){var ht=hh.querySelector('h1');if(ht)ht.setAttribute('aria-label',(ht.innerText||ht.textContent).replace(/\s+/g,' ').trim())}
+}
+applyLang(lang);
+var langBtn=d.getElementById('lang');
+if(langBtn)langBtn.addEventListener('click',function(){
+  applyLang(lang==='es'?'en':'es');
+  try{localStorage.setItem('lang',lang)}catch(e){}
+});
+
 /* Hero: palabras del titular y elementos escalonados */
 var hero=d.getElementById('hero'),h1=hero.querySelector('h1');
 (function(el){
-  var label=el.textContent.replace(/\s+/g,' ').trim(),nodes=[].slice.call(el.childNodes),i=0;
+  var label=(el.innerText||el.textContent).replace(/\s+/g,' ').trim(),nodes=[].slice.call(el.childNodes),i=0;
   el.setAttribute('aria-label',label);el.textContent='';
   nodes.forEach(function(n){
     if(n.nodeType===3){
@@ -334,11 +426,62 @@ if(send&&f.length>=4)send.addEventListener('click',function(){
   if(!n){f[0].classList.add('bad');ok=false}
   if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)){f[2].classList.add('bad');ok=false}
   if(!t){f[3].classList.add('bad');ok=false}
-  if(!ok){msg.textContent='Completa tu nombre, un correo válido y el mensaje.';msg.style.color='#ff8a8a';return}
-  var body='Hola, soy '+n+(a?' '+a:'')+' ('+mail+').\n\n'+t;
-  location.href='mailto:luis@vejar.me?subject='+encodeURIComponent('Contacto desde el portafolio — '+n)+'&body='+encodeURIComponent(body);
-  msg.textContent='Abriendo tu app de correo…';msg.style.color='#9a9aa3';
+  if(!ok){msg.textContent=T().fill;msg.style.color='#ff8a8a';return}
+  var body=(lang==='en'?"Hi, I'm ":'Hola, soy ')+n+(a?' '+a:'')+' ('+mail+').\n\n'+t;
+  location.href='mailto:luis@vejar.me?subject='+encodeURIComponent(T().subject+n)+'&body='+encodeURIComponent(body);
+  msg.textContent=T().opening;msg.style.color='#9a9aa3';
 });
+
+/* Casos de estudio */
+var CASES={
+nocturne:{
+  es:{kind:'Proyecto de portafolio · E-commerce',title:'NOCTURNE',sub:'Moda de lujo · Dark editorial · 2026',problem:'Las tiendas de lujo online suelen caer en plantillas genéricas: catálogo plano, poca atmósfera y una experiencia que no está a la altura del producto.',solution:'Sistema editorial oscuro: tipografía de alto contraste, grilla amplia de producto y microinteracciones sobrias. El negro es lienzo, no decoración.',result:'Identidad y home de tienda resueltos: sistema tipográfico, grilla responsive y guía para catálogo, ficha y checkout.'},
+  en:{kind:'Portfolio project · E-commerce',title:'NOCTURNE',sub:'Luxury fashion · Dark editorial · 2026',problem:"Luxury stores online often fall into generic templates: flat catalogs, little atmosphere and an experience that doesn't match the product.",solution:'A dark editorial system: high-contrast type, a generous product grid and restrained micro-interactions. Black is the canvas, not decoration.',result:'Identity and store home resolved: type system, responsive grid and guidelines for catalog, product page and checkout.'}
+},
+inkdark:{
+  es:{kind:'Proyecto de portafolio · Identidad + sitio',title:'INKDARK',sub:'Estudio de tatuajes · Neo-noir · 2026',problem:'Los estudios de tatuaje compiten en Instagram, pero sus sitios rara vez transmiten el estilo que venden ni hacen fácil reservar.',solution:'Identidad neo-noir de alto contraste y una landing con galería, estilos y reserva directa por WhatsApp.',result:'Marca y sitio coherentes: el visitante entiende el estilo del estudio en segundos y puede reservar sin salir de la página.'},
+  en:{kind:'Portfolio project · Identity + website',title:'INKDARK',sub:'Tattoo studio · Neo-noir · 2026',problem:"Tattoo studios compete on Instagram, but their websites rarely convey the style they sell or make booking easy.",solution:'A high-contrast neo-noir identity and a landing page with gallery, styles and direct WhatsApp booking.',result:"Consistent brand and site: visitors get the studio's style in seconds and can book without leaving the page."}
+},
+ficus:{
+  es:{kind:'Proyecto de portafolio · Landing',title:'Ficus Restaurante',sub:'Restaurante · Chillán · 2026',problem:'Carta en PDF, horarios en una story y reservas por DM: la información del restaurante vive dispersa en redes.',solution:'Landing de una página con carta, horarios, ubicación y CTA de reserva; jerarquía clara y lectura cómoda en móvil.',result:'Todo en un solo lugar y un camino directo a la reserva, sin depender del algoritmo.'},
+  en:{kind:'Portfolio project · Landing page',title:'Ficus Restaurant',sub:'Restaurant · Chillán · 2026',problem:"Menu in a PDF, hours in a story and bookings by DM: the restaurant's information lives scattered across social media.",solution:'A one-page landing with menu, hours, location and a booking CTA; clear hierarchy and comfortable mobile reading.',result:'Everything in one place and a direct path to booking, without depending on the algorithm.'}
+},
+jorge:{
+  es:{kind:'Proyecto de portafolio · Landing',title:'Jorge Barber Shop',sub:'Barbería · Chillán · 2026',problem:'La barbería solo existía en Instagram: sin horarios claros ni una forma rápida de agendar.',solution:'Landing con servicios, precios, horarios y botón de WhatsApp con mensaje pre-escrito.',result:'Un enlace único para compartir y agendar en dos toques.'},
+  en:{kind:'Portfolio project · Landing page',title:'Jorge Barber Shop',sub:'Barbershop · Chillán · 2026',problem:'The barbershop only existed on Instagram: no clear hours and no quick way to book.',solution:'A landing page with services, prices, hours and a WhatsApp button with a pre-written message.',result:'One link to share and book in two taps.'}
+},
+astrumsmp:{
+  es:{kind:'Proyecto real · Web de comunidad',title:'AstrumSMP',sub:'Servidor de Minecraft · 2026',problem:'La comunidad vivía en Discord: reglas, roadmap y estado del servidor dispersos, y los jugadores nuevos no sabían por dónde partir.',solution:'Sitio con animaciones GSAP, secciones de normativa, roadmap y accesos; backend propio y despliegue continuo.',result:'Un punto de entrada claro para nuevos jugadores y una base para anunciar temporadas sin depender solo de Discord.'},
+  en:{kind:'Real project · Community website',title:'AstrumSMP',sub:'Minecraft server · 2026',problem:"The community lived on Discord: rules, roadmap and server status scattered, and new players didn't know where to start.",solution:'A site with GSAP animations, rules, roadmap and access sections; a custom backend and continuous deployment.',result:'A clear entry point for new players and a base to announce seasons without relying only on Discord.'}
+},
+mods:{
+  es:{kind:'En desarrollo · Fabric',title:'Mods de Minecraft',sub:'Rendimiento y economía · 2026',problem:'Servidores pequeños pelean con el rendimiento y con una economía que no escala; los mods existentes suelen ser pesados o cerrados.',solution:'BoosterLite (rendimiento ligero) y SmartEco (economía configurable) como mods Fabric independientes, con configuración simple.',result:'Ambos en desarrollo activo; todavía sin descargas públicas. El portafolio documenta el proceso, no promesas.'},
+  en:{kind:'In development · Fabric',title:'Minecraft Mods',sub:'Performance & economy · 2026',problem:"Small servers struggle with performance and an economy that doesn't scale; existing mods are often heavy or closed-source.",solution:'BoosterLite (lightweight performance) and SmartEco (configurable economy) as standalone Fabric mods, with simple configuration.',result:'Both in active development; no public downloads yet. The portfolio documents the process, not promises.'}
+}
+};
+var cdlg=d.getElementById('case');
+function openCase(id){
+  var c=CASES[id];if(!c||!cdlg)return;
+  var x=c[lang]||c.es;
+  d.getElementById('case-kind').textContent=x.kind;
+  d.getElementById('case-title').textContent=x.title;
+  d.getElementById('case-sub').textContent=x.sub;
+  d.getElementById('case-p').textContent=x.problem;
+  d.getElementById('case-s').textContent=x.solution;
+  d.getElementById('case-r').textContent=x.result;
+  if(typeof cdlg.showModal==='function'){cdlg.showModal();h.classList.add('lock')}
+}
+[].forEach.call(d.querySelectorAll('[data-case]'),function(btn){
+  btn.addEventListener('click',function(){openCase(btn.getAttribute('data-case'))});
+});
+if(cdlg){
+  var cxb=d.getElementById('case-x');
+  if(cxb)cxb.addEventListener('click',function(){cdlg.close()});
+  cdlg.addEventListener('close',function(){h.classList.remove('lock')});
+  cdlg.addEventListener('click',function(e){if(e.target===cdlg)cdlg.close()});
+  var cta=d.getElementById('case-cta');
+  if(cta)cta.addEventListener('click',function(){cdlg.close()});
+}
 })();
 </script>
 </body>
